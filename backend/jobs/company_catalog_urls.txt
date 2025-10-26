@@ -1,0 +1,144 @@
+# Format: "Company Name - https://careers.example.com"
+# You can append more lines; duplicates are skipped automatically.
+Google - https://careers.google.com
+Apple - https://jobs.apple.com
+Meta - https://www.metacareers.com
+Amazon - https://www.amazon.jobs
+Netflix - https://jobs.netflix.com
+Microsoft - https://careers.microsoft.com
+Tesla - https://www.tesla.com/careers
+Adobe - https://careers.adobe.com
+Salesforce - https://www.salesforce.com/company/careers
+Oracle - https://www.oracle.com/careers
+SAP - https://jobs.sap.com
+IBM - https://www.ibm.com/careers
+Intel - https://jobs.intel.com
+AMD - https://careers.amd.com
+Nvidia - https://www.nvidia.com/en-us/about-nvidia/careers
+Qualcomm - https://www.qualcomm.com/company/careers
+Cisco - https://jobs.cisco.com
+VMware - https://careers.vmware.com
+Dell Technologies - https://jobs.dell.com
+HP - https://jobs.hp.com
+Lenovo - https://jobs.lenovo.com
+Samsung - https://www.samsung.com/us/careers
+Sony - https://www.sonyjobs.com
+Stripe - https://stripe.com/jobs
+Databricks - https://www.databricks.com/company/careers
+Snowflake - https://careers.snowflake.com
+Airbnb - https://careers.airbnb.com
+Uber - https://www.uber.com/careers
+Lyft - https://www.lyft.com/careers
+DoorDash - https://careers.doordash.com
+Instacart - https://instacart.careers
+Coinbase - https://www.coinbase.com/careers
+Robinhood - https://robinhood.com/careers
+Plaid - https://plaid.com/careers
+Figma - https://www.figma.com/careers
+Notion - https://www.notion.so/careers
+Discord - https://discord.com/careers
+Reddit - https://www.redditinc.com/careers
+Pinterest - https://www.pinterestcareers.com
+Snap - https://careers.snap.com
+Spotify - https://www.lifeatspotify.com
+Zoom - https://careers.zoom.us
+Dropbox - https://jobs.dropbox.com
+Slack - https://slack.com/careers
+Block (Square) - https://careers.block.xyz
+Palantir - https://www.palantir.com/careers
+Roblox - https://corp.roblox.com/careers
+Epic Games - https://www.epicgames.com/site/careers
+Unity - https://careers.unity.com
+PayPal - https://careers.pypl.com
+Visa - https://usa.visa.com/careers.html
+Mastercard - https://www.mastercard.us/en-us/about-mastercard/careers.html
+American Express - https://careers.americanexpress.com
+Capital One - https://www.capitalonecareers.com
+Goldman Sachs - https://www.goldmansachs.com/careers
+JPMorgan Chase - https://careers.jpmorgan.com
+Morgan Stanley - https://www.morganstanley.com/careers
+Fidelity - https://jobs.fidelity.com
+BlackRock - https://careers.blackrock.com
+Riot Games - https://www.riotgames.com/en/work-with-us
+Valve - https://www.valvesoftware.com/en/jobs
+Nintendo - https://careers.nintendo.com
+Ubisoft - https://www.ubisoft.com/en-us/company/careers
+Bungie - https://careers.bungie.com
+Shopify - https://www.shopify.com/careers
+eBay - https://careers.ebayinc.com
+Walmart - https://careers.walmart.com
+Target - https://corporate.target.com/careers
+Wayfair - https://www.wayfair.com/careers
+Etsy - https://www.etsy.com/careers
+AWS - https://aws.amazon.com/careers
+Google Cloud - https://cloud.google.com/careers
+DigitalOcean - https://www.digitalocean.com/careers
+Cloudflare - https://www.cloudflare.com/careers
+MongoDB - https://www.mongodb.com/careers
+Redis - https://redis.com/company/careers
+Confluent - https://www.confluent.io/careers
+Palo Alto Networks - https://jobs.paloaltonetworks.com
+CrowdStrike - https://www.crowdstrike.com/careers
+Okta - https://www.okta.com/company/careers
+Fortinet - https://www.fortinet.com/careers
+Check Point - https://www.checkpoint.com/careers
+Zscaler - https://www.zscaler.com/careers
+OpenAI - https://openai.com/careers
+Anthropic - https://www.anthropic.com/careers
+DeepMind - https://www.deepmind.com/careers
+Scale AI - https://scale.com/careers
+Hugging Face - https://huggingface.co/jobs
+Cohere - https://cohere.com/careers
+Twitter (X) - https://careers.twitter.com
+LinkedIn - https://careers.linkedin.com
+TikTok - https://careers.tiktok.com
+Twitch - https://www.twitch.tv/jobs
+Waymo - https://waymo.com/careers
+Cruise - https://getcruise.com/careers
+Aurora - https://aurora.tech/careers
+Rivian - https://rivian.com/careers
+Lucid Motors - https://www.lucidmotors.com/careers
+ServiceNow - https://careers.servicenow.com
+Workday - https://www.workday.com/en-us/company/careers.html
+Atlassian - https://www.atlassian.com/company/careers
+Splunk - https://www.splunk.com/en_us/careers.html
+Twilio - https://www.twilio.com/company/jobs
+Zendesk - https://www.zendesk.com/jobs
+HubSpot - https://www.hubspot.com/careers
+Asana - https://asana.com/jobs
+Monday.com - https://monday.com/careers
+TCS - https://www.tcs.com/careers
+Infosys - https://www.infosys.com/careers
+Wipro - https://careers.wipro.com
+HCLTech - https://www.hcltech.com/careers
+Tech Mahindra - https://careers.techmahindra.com
+Cognizant - https://careers.cognizant.com
+LTIMindtree - https://www.ltimindtree.com/careers
+Mphasis - https://careers.mphasis.com
+Persistent Systems - https://www.persistent.com/careers
+Hexaware - https://hexaware.com/careers
+Flipkart - https://www.flipkartcareers.com
+Paytm - https://www.paytm.com/careers
+PhonePe - https://www.phonepe.com/careers
+Razorpay - https://razorpay.com/jobs
+Swiggy - https://careers.swiggy.com
+Zomato - https://www.zomato.com/careers
+Ola - https://www.olacabs.com/careers
+CRED - https://careers.cred.club
+Zerodha - https://zerodha.com/careers
+Freshworks - https://www.freshworks.com/company/careers
+Zoho - https://www.zoho.com/careers.html
+Dream11 - https://www.dream11.com/careers
+PolicyBazaar - https://www.policybazaar.com/about-us/career
+Nykaa - https://www.nykaa.com/careers
+UrbanCompany - https://www.urbancompany.com/careers
+BrowserStack - https://www.browserstack.com/careers
+Postman - https://www.postman.com/company/careers
+Chargebee - https://www.chargebee.com/careers
+Accenture - https://www.accenture.com/careers
+Deloitte - https://www2.deloitte.com/careers
+PwC - https://www.pwc.com/careers
+EY - https://www.ey.com/careers
+KPMG - https://home.kpmg/careers
+Capgemini - https://www.capgemini.com/careers
+McKinsey - https://www.mckinsey.com/careers
