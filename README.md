@@ -1,3 +1,4 @@
+<img width="1568" height="762" alt="image" src="https://github.com/user-attachments/assets/dc88d863-64dc-4512-af0e-798c9d415b3b" />
 # Real-Time Job Application Portal
 
 A full-stack application built with Django and React that helps users find and automatically apply to jobs based on resume keyword matching.
