@@ -1,8 +1,7 @@
 from django.urls import re_path
+from .consumers import NotificationConsumer
 
-# Placeholder websocket routing to satisfy Channels ASGI import.
-# Add real consumers here when implementing notifications via websockets.
+# WebSocket routing for real-time notifications
 websocket_urlpatterns = [
-    # Example:
-    # re_path(r"ws/notifications/$", YourConsumer.as_asgi()),
+    re_path(r"^ws/notifications/$", NotificationConsumer.as_asgi()),
 ]

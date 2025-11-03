@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from asgiref.sync import async_to_sync
+from channels.layers import get_channel_layer
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
@@ -37,3 +39,28 @@ class Notification(models.Model):
 
     def __str__(self):
         return f"{self.title} - {self.user.username}"
+
+@receiver(post_save, sender=Notification)
+def push_notification_ws(sender, instance: 'Notification', created, **kwargs):
+    """Push new notifications to the user's WebSocket group."""
+    try:
+        if not created:
+            return
+        channel_layer = get_channel_layer()
+        if not channel_layer:
+            return
+        group = f"notifications_{instance.user_id}"
+        payload = {
+            'type': 'notification_message',
+            'notification': {
+                'id': instance.id,
+                'title': instance.title,
+                'message': instance.message,
+                'is_read': instance.is_read,
+                'created_at': instance.created_at.isoformat(),
+            }
+        }
+        async_to_sync(channel_layer.group_send)(group, payload)
+    except Exception:
+        # Fail silently; notifications are still available via REST polling
+        pass
