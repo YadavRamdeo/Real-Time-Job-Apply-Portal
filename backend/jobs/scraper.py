@@ -348,7 +348,7 @@ def search_jobs_across_portals(keywords: str, location: str | None = None, max_p
             return any(tok in t for tok in role_keywords)
 
         UA = JobScraper(None).headers['User-Agent']
-        TIMEOUT = 6
+TIMEOUT = 4
         def add_source(items, source):
             for it in items:
                 it['source'] = source
@@ -521,7 +521,7 @@ def search_jobs_across_portals(keywords: str, location: str | None = None, max_p
         with ThreadPoolExecutor(max_workers=len(fetchers)) as ex:
             futs = [ex.submit(fn) for fn in fetchers]
             # Allow overall wait with a soft deadline
-            deadline = TIMEOUT + 2
+deadline = TIMEOUT + 1
             for f in as_completed(futs, timeout=deadline):
                 try:
                     items = f.result()
