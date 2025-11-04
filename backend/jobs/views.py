@@ -8,7 +8,7 @@ from .models import Company, Job, JobApplication
 from .serializers import CompanySerializer, JobSerializer, JobApplicationSerializer
 from .scraper import scrape_company_jobs, search_jobs_across_portals
 from resumes.models import Resume
-from resumes.matching import calculate_match_score
+from resumes.matching import calculate_match_score, extract_skills_from_resume, preprocess_text
 import logging
 
 logger = logging.getLogger(__name__)
@@ -80,6 +80,47 @@ def search_live_jobs(request):
         logger.error(f"Error in live job search: {e}")
         return Response({"error": "Live search failed"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+def _keywords_from_resume(resume) -> str:
+    """Build search keywords from resume parsed content (skills, languages, frameworks).
+    Falls back to stored resume.skills, then generic defaults.
+    """
+    try:
+        text = (getattr(resume, 'parsed_content', '') or '').strip()
+        keywords: list[str] = []
+        if text:
+            # Prefer explicit skills extracted from the full resume text
+            try:
+                skills = extract_skills_from_resume(text)
+                keywords.extend(skills or [])
+            except Exception:
+                pass
+            # If still sparse, add top tokens by frequency (after preprocessing)
+            if len(keywords) < 5:
+                try:
+                    from collections import Counter
+                    tokens = (preprocess_text(text) or '').split()
+                    common = [tok for tok, _ in Counter(tokens).most_common(12)]
+                    keywords.extend([k for k in common if k not in keywords])
+                except Exception:
+                    pass
+        # Fallback to structured resume.skills if present
+        if not keywords:
+            rs = getattr(resume, 'skills', None)
+            if rs:
+                if isinstance(rs, list):
+                    keywords = [str(s) for s in rs if s]
+                else:
+                    try:
+                        keywords = [str(rs)]
+                    except Exception:
+                        pass
+        # Final fallback
+        if not keywords:
+            keywords = ['software', 'developer', 'engineer', 'python', 'django', 'react']
+        return ' '.join(keywords[:12])
+    except Exception:
+        return 'software developer engineer python django react'
+
 @api_view(['GET'])
 def find_matching_jobs(request, resume_id):
     """Find jobs matching a resume.
@@ -128,20 +169,22 @@ def find_matching_jobs(request, resume_id):
                     'match_score': round(match_score, 2)
                 })
 
-        # Also aggregate from external portals and ATS catalogs, persist top matches to DB, and include
+        # Also aggregate from external portals and ATS catalogs (no DB writes), and include
         try:
-            from .models import Company, Job
-            from .scraper import search_jobs_across_portals
             from .ats import scrape_companies_from_catalog
             import json
             from pathlib import Path
 
-            external = search_jobs_across_portals(
-                keywords=' '.join(resume.skills) if getattr(resume, 'skills', None) else 'software engineer developer sde',
-                location='India',
-                country='India',
-                max_per_portal=10,
-            )
+            # Allow disabling external fetch for speed via ?external=0
+            external_enabled = str(request.query_params.get('external', '1')).lower() in ['1','true','yes','on']
+            external = []
+            if external_enabled:
+                external = search_jobs_across_portals(
+                    keywords=_keywords_from_resume(resume),
+                    location=request.query_params.get('location') or 'India',
+                    country=request.query_params.get('country') or 'India',
+                    max_per_portal=int(request.query_params.get('max') or 5),
+                )
             # ATS catalog
             try:
                 base = Path(__file__).resolve().parent
@@ -156,28 +199,28 @@ def find_matching_jobs(request, resume_id):
 
             for item in external:
                 try:
-                    # Ensure company
-                    company, _ = Company.objects.get_or_create(name=item.get('company_name') or 'Unknown', defaults={'website': ''})
-                    job, _ = Job.objects.update_or_create(
-                        title=item['title'],
-                        company=company,
-                        application_url=item['application_url'],
-                        defaults={
-                            'location': item.get('location') or '',
-                            'job_type': item.get('job_type') or 'full_time',
-                            'description': item.get('description') or '',
-                            'requirements': item.get('requirements') or '',
-                            'salary_min': item.get('salary_min'),
-                            'salary_max': item.get('salary_max'),
-                            'keywords': item.get('keywords') or [],
-                            'status': 'active',
-                            'source': item.get('source') or '',
-                        }
+                    title = item.get('title') or ''
+                    if not role_ok(title):
+                        continue
+                    ms = calculate_match_score(
+                        resume.parsed_content or '',
+                        item.get('description') or '',
+                        item.get('requirements') or ''
                     )
-                    ms = calculate_match_score(resume.parsed_content or '', job.description or '', job.requirements or '')
-                    if ms >= threshold_percent and role_ok(job.title):
+                    if ms >= threshold_percent:
                         job_matches.append({
-                            'job': JobSerializer(job).data,
+                            'job': {
+                                'title': title,
+                                'company': {'name': item.get('company_name') or 'Unknown'},
+                                'location': item.get('location') or '',
+                                'job_type': item.get('job_type') or 'full_time',
+                                'description': item.get('description') or '',
+                                'requirements': item.get('requirements') or '',
+                                'salary_min': item.get('salary_min'),
+                                'salary_max': item.get('salary_max'),
+                                'application_url': item.get('application_url'),
+                                'source': item.get('source') or '',
+                            },
                             'match_score': round(ms, 2)
                         })
                 except Exception:
