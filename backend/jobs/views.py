@@ -179,7 +179,7 @@ def find_matching_jobs(request, resume_id):
             from pathlib import Path
 
             # Allow disabling external fetch for speed via ?external=0
-external_enabled = str(request.query_params.get('external', '0')).lower() in ['1','true','yes','on']
+            external_enabled = str(request.query_params.get('external', '0')).lower() in ['1','true','yes','on']
             external = []
             if external_enabled:
                 external = search_jobs_across_portals(
