@@ -3,10 +3,34 @@ from bs4 import BeautifulSoup
 import json
 import re
 import logging
+import time
+import threading
 from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from .models import Company, Job
 
 logger = logging.getLogger(__name__)
+
+# Simple in-process TTL cache for external searches (speeds up repeated queries during a session)
+_CACHE: dict[tuple, tuple[float, list[dict]]] = {}
+_CACHE_LOCK = threading.Lock()
+_CACHE_TTL_SECONDS = 300  # 5 minutes
+
+def _cache_get(key: tuple):
+    now = time.time()
+    with _CACHE_LOCK:
+        entry = _CACHE.get(key)
+        if not entry:
+            return None
+        ts, value = entry
+        if now - ts > _CACHE_TTL_SECONDS:
+            _CACHE.pop(key, None)
+            return None
+        return value
+
+def _cache_set(key: tuple, value: list[dict]):
+    with _CACHE_LOCK:
+        _CACHE[key] = (time.time(), value)
 
 class JobScraper:
     """Base class for job scrapers"""
@@ -300,9 +324,17 @@ class NaukriScraper(JobScraper):
 
 def search_jobs_across_portals(keywords: str, location: str | None = None, max_per_portal: int = 10, country: str = 'India', role_keywords: list[str] | None = None):
     """Search jobs on supported portals and return a combined list of dictionaries.
-    This function is best-effort and resilient to scraping issues.
+    - Parallelizes portal fetches to reduce total latency.
+    - Applies a short timeout per portal.
+    - Caches results in-process for a few minutes to avoid repeated scraping.
     """
-    results = []
+    # Cache lookup
+    cache_key = (keywords or '', location or '', country or '', int(max_per_portal or 0), tuple(role_keywords) if role_keywords else None)
+    cached = _cache_get(cache_key)
+    if cached is not None:
+        return cached
+
+    results: list[dict] = []
     try:
         # Normalize role keywords
         role_keywords = role_keywords or [
@@ -315,43 +347,51 @@ def search_jobs_across_portals(keywords: str, location: str | None = None, max_p
             t = (title or '').lower()
             return any(tok in t for tok in role_keywords)
 
-        # Helper to record with source
-        def add_items(items, source):
+        UA = JobScraper(None).headers['User-Agent']
+        TIMEOUT = 6
+        def add_source(items, source):
             for it in items:
                 it['source'] = source
             return items
 
-        # Indeed
-        try:
-            indeed = IndeedScraper(Company(name='Indeed', website='https://www.indeed.com'))
-            items = indeed.scrape_jobs(keywords=keywords, location=location, country=country)[:max_per_portal]
-            results.extend([it for it in add_items(items, 'indeed') if role_ok(it.get('title'))])
-        except Exception as e:
-            logger.error(f"Indeed search error: {e}")
-        # Naukri
-        try:
-            naukri = NaukriScraper(Company(name='Naukri', website='https://www.naukri.com'))
-            items = naukri.scrape_jobs(keywords=keywords, location=location or 'india', country=country)[:max_per_portal]
-            results.extend([it for it in add_items(items, 'naukri') if role_ok(it.get('title'))])
-        except Exception as e:
-            logger.error(f"Naukri search error: {e}")
-        # WeWorkRemotely
-        try:
-            url = "https://weworkremotely.com/categories/remote-programming-jobs"
-            resp = requests.get(url, headers={"User-Agent": JobScraper(None).headers['User-Agent']}, timeout=15)
-            if resp.status_code == 200:
+        def fetch_indeed():
+            try:
+                indeed = IndeedScraper(Company(name='Indeed', website='https://www.indeed.com'))
+                items = indeed.scrape_jobs(keywords=keywords, location=location, country=country)[:max_per_portal]
+                return [it for it in add_source(items, 'indeed') if role_ok(it.get('title'))]
+            except Exception as e:
+                logger.error(f"Indeed search error: {e}")
+                return []
+
+        def fetch_naukri():
+            try:
+                naukri = NaukriScraper(Company(name='Naukri', website='https://www.naukri.com'))
+                items = naukri.scrape_jobs(keywords=keywords, location=location or 'india', country=country)[:max_per_portal]
+                return [it for it in add_source(items, 'naukri') if role_ok(it.get('title'))]
+            except Exception as e:
+                logger.error(f"Naukri search error: {e}")
+                return []
+
+        def fetch_wwr():
+            try:
+                url = "https://weworkremotely.com/categories/remote-programming-jobs"
+                resp = requests.get(url, headers={"User-Agent": UA}, timeout=TIMEOUT)
+                if resp.status_code != 200:
+                    return []
                 soup = BeautifulSoup(resp.text, 'html.parser')
                 lis = soup.select('section.jobs li.feature, section.jobs li:not(.view-all)')
-                cnt = 0
+                out = []
                 for li in lis:
-                    if cnt >= max_per_portal: break
+                    if len(out) >= max_per_portal:
+                        break
                     a = li.find('a', href=True)
-                    if not a: continue
+                    if not a:
+                        continue
                     title = (a.find('span', class_='title').get_text(strip=True) if a.find('span', class_='title') else a.get_text(strip=True))
                     company = (a.find('span', class_='company').get_text(strip=True) if a.find('span', class_='company') else 'Unknown')
                     if not role_ok(title):
                         continue
-                    results.append({
+                    out.append({
                         'title': title,
                         'company_name': company,
                         'location': 'Remote',
@@ -362,17 +402,20 @@ def search_jobs_across_portals(keywords: str, location: str | None = None, max_p
                         'salary_max': None,
                         'application_url': 'https://weworkremotely.com' + a['href'],
                         'keywords': [],
-                        'source': 'weworkremotely'
                     })
-                    cnt += 1
-        except Exception as e:
-            logger.error(f"WWR search error: {e}")
-        # RemoteOK (simple HTML list)
-        try:
-            resp = requests.get('https://remoteok.com/remote-dev-jobs', headers={"User-Agent": JobScraper(None).headers['User-Agent']}, timeout=15)
-            if resp.status_code == 200:
+                return add_source(out, 'weworkremotely')
+            except Exception as e:
+                logger.error(f"WWR search error: {e}")
+                return []
+
+        def fetch_remoteok():
+            try:
+                resp = requests.get('https://remoteok.com/remote-dev-jobs', headers={"User-Agent": UA}, timeout=TIMEOUT)
+                if resp.status_code != 200:
+                    return []
                 soup = BeautifulSoup(resp.text, 'html.parser')
                 rows = soup.select('table#jobsboard tr.job')[:max_per_portal]
+                out = []
                 for row in rows:
                     title = (row.find('h2') or row.find('td', class_='company_and_position')).get_text(strip=True)
                     if not role_ok(title):
@@ -381,7 +424,7 @@ def search_jobs_across_portals(keywords: str, location: str | None = None, max_p
                     link = row.get('data-href') or (row.find('a', href=True)['href'] if row.find('a', href=True) else '')
                     if link and not link.startswith('http'):
                         link = 'https://remoteok.com' + link
-                    results.append({
+                    out.append({
                         'title': title,
                         'company_name': comp,
                         'location': 'Remote',
@@ -392,23 +435,27 @@ def search_jobs_across_portals(keywords: str, location: str | None = None, max_p
                         'salary_max': None,
                         'application_url': link,
                         'keywords': [],
-                        'source': 'remoteok'
                     })
-        except Exception as e:
-            logger.error(f"RemoteOK search error: {e}")
-        # Remotive
-        try:
-            resp = requests.get('https://remotive.com/remote-jobs/software-dev', headers={"User-Agent": JobScraper(None).headers['User-Agent']}, timeout=15)
-            if resp.status_code == 200:
+                return add_source(out, 'remoteok')
+            except Exception as e:
+                logger.error(f"RemoteOK search error: {e}")
+                return []
+
+        def fetch_remotive():
+            try:
+                resp = requests.get('https://remotive.com/remote-jobs/software-dev', headers={"User-Agent": UA}, timeout=TIMEOUT)
+                if resp.status_code != 200:
+                    return []
                 soup = BeautifulSoup(resp.text, 'html.parser')
                 cards = soup.select('div.job-tile')[:max_per_portal]
+                out = []
                 for c in cards:
                     a = c.find('a', href=True)
                     title = c.find('span', class_='font-weight-bold').get_text(strip=True) if c.find('span', class_='font-weight-bold') else (a.get_text(strip=True) if a else '')
                     if not role_ok(title):
                         continue
                     comp = c.find('span', class_='company')
-                    results.append({
+                    out.append({
                         'title': title,
                         'company_name': comp.get_text(strip=True) if comp else 'Unknown',
                         'location': 'Remote',
@@ -419,23 +466,27 @@ def search_jobs_across_portals(keywords: str, location: str | None = None, max_p
                         'salary_max': None,
                         'application_url': ('https://remotive.com' + a['href']) if a and a['href'].startswith('/') else (a['href'] if a else ''),
                         'keywords': [],
-                        'source': 'remotive'
                     })
-        except Exception as e:
-            logger.error(f"Remotive search error: {e}")
-        # LinkedIn (best-effort)
-        try:
-            base_url = "https://www.linkedin.com/jobs/search"
-            params = {
-                "keywords": keywords or "",
-                "location": location or (country or ""),
-                "trk": "jobs_jserp_search_button_execute",
-                "pageNum": 0
-            }
-            resp = requests.get(base_url, params=params, headers={"User-Agent": JobScraper(None).headers['User-Agent']}, timeout=15)
-            if resp.status_code == 200:
+                return add_source(out, 'remotive')
+            except Exception as e:
+                logger.error(f"Remotive search error: {e}")
+                return []
+
+        def fetch_linkedin():
+            try:
+                base_url = "https://www.linkedin.com/jobs/search"
+                params = {
+                    "keywords": keywords or "",
+                    "location": location or (country or ""),
+                    "trk": "jobs_jserp_search_button_execute",
+                    "pageNum": 0
+                }
+                resp = requests.get(base_url, params=params, headers={"User-Agent": UA}, timeout=TIMEOUT)
+                if resp.status_code != 200:
+                    return []
                 soup = BeautifulSoup(resp.text, 'html.parser')
                 cards = soup.find_all('div', class_='job-search-card')
+                out = []
                 for card in cards[:max_per_portal]:
                     try:
                         title_elem = card.find('h3', class_='base-search-card__title')
@@ -447,7 +498,7 @@ def search_jobs_across_portals(keywords: str, location: str | None = None, max_p
                         t = title_elem.get_text(strip=True)
                         if not role_ok(t):
                             continue
-                        results.append({
+                        out.append({
                             'title': t,
                             'company_name': company_elem.get_text(strip=True),
                             'location': location_elem.get_text(strip=True) if location_elem else '',
@@ -458,12 +509,26 @@ def search_jobs_across_portals(keywords: str, location: str | None = None, max_p
                             'salary_max': None,
                             'application_url': link_elem['href'],
                             'keywords': [],
-                            'source': 'linkedin'
                         })
                     except Exception:
                         continue
-        except Exception as e:
-            logger.error(f"LinkedIn search error: {e}")
+                return add_source(out, 'linkedin')
+            except Exception as e:
+                logger.error(f"LinkedIn search error: {e}")
+                return []
+
+        fetchers = [fetch_indeed, fetch_naukri, fetch_wwr, fetch_remoteok, fetch_remotive, fetch_linkedin]
+        with ThreadPoolExecutor(max_workers=len(fetchers)) as ex:
+            futs = [ex.submit(fn) for fn in fetchers]
+            # Allow overall wait with a soft deadline
+            deadline = TIMEOUT + 2
+            for f in as_completed(futs, timeout=deadline):
+                try:
+                    items = f.result()
+                    if items:
+                        results.extend(items)
+                except Exception:
+                    continue
     finally:
         # Dedupe by URL
         seen = set()
@@ -474,6 +539,7 @@ def search_jobs_across_portals(keywords: str, location: str | None = None, max_p
                 continue
             seen.add(url)
             deduped.append(it)
+        _cache_set(cache_key, deduped)
         return deduped
 
 

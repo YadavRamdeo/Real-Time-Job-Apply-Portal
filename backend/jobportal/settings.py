@@ -1,16 +1,24 @@
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Load environment variables from backend/.env if present
+load_dotenv(dotenv_path=BASE_DIR / '.env', override=False)
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-h7d3w9y8e7r6t5r4e3w2q1w2e3r4t5y6u7i8o9p0'
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-h7d3w9y8e7r6t5r4e3w2q1w2e3r4t5y6u7i8o9p0')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+# Allow localhost, 127.0.0.1 and 0.0.0.0 by default for WSL access
+ALLOWED_HOSTS = [h.strip() for h in os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1,0.0.0.0').split(',') if h.strip()]
+if DEBUG:
+    # In development, allow all hosts for convenience (WSL/localhost variations)
+    ALLOWED_HOSTS = ['*']
 
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = True
