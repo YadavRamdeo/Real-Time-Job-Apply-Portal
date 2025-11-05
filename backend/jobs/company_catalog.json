@@ -1,34 +1,5078 @@
 [
-  {"name": "Google", "career_url": "https://boards.greenhouse.io/google"},
-  {"name": "Microsoft", "career_url": "https://careers.microsoft.com"},
-  {"name": "Amazon", "career_url": "https://www.amazon.jobs/en"},
-  {"name": "Meta", "career_url": "https://www.metacareers.com/jobs"},
-  {"name": "Apple", "career_url": "https://jobs.apple.com"},
-  {"name": "Netflix", "career_url": "https://jobs.netflix.com"},
-  {"name": "Uber", "career_url": "https://www.uber.com/us/en/careers/"},
-  {"name": "Lyft", "career_url": "https://www.lyft.com/careers"},
-  {"name": "Airbnb", "career_url": "https://careers.airbnb.com/open-roles/"},
-  {"name": "Stripe", "career_url": "https://boards.greenhouse.io/stripe"},
-  {"name": "Dropbox", "career_url": "https://jobs.lever.co/dropbox"},
-  {"name": "Atlassian", "career_url": "https://jobs.lever.co/atlassian"},
-  {"name": "Twilio", "career_url": "https://boards.greenhouse.io/twilio"},
-  {"name": "Snowflake", "career_url": "https://careers.snowflake.com"},
-  {"name": "Datadog", "career_url": "https://boards.greenhouse.io/datadog"},
-  {"name": "Cloudflare", "career_url": "https://boards.greenhouse.io/cloudflare"},
-  {"name": "Shopify", "career_url": "https://www.shopify.com/careers"},
-  {"name": "Coinbase", "career_url": "https://www.coinbase.com/careers"},
-  {"name": "Square", "career_url": "https://careers.smartrecruiters.com/Square"},
-  {"name": "Slack", "career_url": "https://slack.com/careers"},
-  {"name": "Zoom", "career_url": "https://careers.zoom.us"},
-  {"name": "NVIDIA", "career_url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite"},
-  {"name": "AMD", "career_url": "https://careers.amd.com"},
-  {"name": "Intel", "career_url": "https://jobs.intel.com"},
-  {"name": "Oracle", "career_url": "https://careers.oracle.com"},
-  {"name": "Salesforce", "career_url": "https://careers.salesforce.com"},
-  {"name": "SAP", "career_url": "https://jobs.sap.com"},
-  {"name": "Adobe", "career_url": "https://careers.adobe.com"},
-  {"name": "LinkedIn", "career_url": "https://careers.linkedin.com"},
-  {"name": "Yelp", "career_url": "https://jobs.lever.co/yelp"},
-  {"name": "Reddit", "career_url": "https://boards.greenhouse.io/reddit"},
-  {"name": "Stripe", "career_url": "https://boards.greenhouse.io/stripe"}
+  {
+    "name": "Google",
+    "career_url": "https://boards.greenhouse.io/google"
+  },
+  {
+    "name": "Microsoft",
+    "career_url": "https://careers.microsoft.com"
+  },
+  {
+    "name": "Amazon",
+    "career_url": "https://www.amazon.jobs/en"
+  },
+  {
+    "name": "Meta",
+    "career_url": "https://www.metacareers.com/jobs"
+  },
+  {
+    "name": "Apple",
+    "career_url": "https://jobs.apple.com"
+  },
+  {
+    "name": "Netflix",
+    "career_url": "https://jobs.netflix.com"
+  },
+  {
+    "name": "Uber",
+    "career_url": "https://www.uber.com/us/en/careers/"
+  },
+  {
+    "name": "Lyft",
+    "career_url": "https://www.lyft.com/careers"
+  },
+  {
+    "name": "Airbnb",
+    "career_url": "https://careers.airbnb.com/open-roles/"
+  },
+  {
+    "name": "Stripe",
+    "career_url": "https://boards.greenhouse.io/stripe"
+  },
+  {
+    "name": "Dropbox",
+    "career_url": "https://jobs.lever.co/dropbox"
+  },
+  {
+    "name": "Atlassian",
+    "career_url": "https://jobs.lever.co/atlassian"
+  },
+  {
+    "name": "Twilio",
+    "career_url": "https://boards.greenhouse.io/twilio"
+  },
+  {
+    "name": "Snowflake",
+    "career_url": "https://careers.snowflake.com"
+  },
+  {
+    "name": "Datadog",
+    "career_url": "https://boards.greenhouse.io/datadog"
+  },
+  {
+    "name": "Cloudflare",
+    "career_url": "https://boards.greenhouse.io/cloudflare"
+  },
+  {
+    "name": "Shopify",
+    "career_url": "https://www.shopify.com/careers"
+  },
+  {
+    "name": "Coinbase",
+    "career_url": "https://www.coinbase.com/careers"
+  },
+  {
+    "name": "Square",
+    "career_url": "https://careers.smartrecruiters.com/Square"
+  },
+  {
+    "name": "Slack",
+    "career_url": "https://slack.com/careers"
+  },
+  {
+    "name": "Zoom",
+    "career_url": "https://careers.zoom.us"
+  },
+  {
+    "name": "NVIDIA",
+    "career_url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite"
+  },
+  {
+    "name": "AMD",
+    "career_url": "https://careers.amd.com"
+  },
+  {
+    "name": "Intel",
+    "career_url": "https://jobs.intel.com"
+  },
+  {
+    "name": "Oracle",
+    "career_url": "https://careers.oracle.com"
+  },
+  {
+    "name": "Salesforce",
+    "career_url": "https://careers.salesforce.com"
+  },
+  {
+    "name": "SAP",
+    "career_url": "https://jobs.sap.com"
+  },
+  {
+    "name": "Adobe",
+    "career_url": "https://careers.adobe.com"
+  },
+  {
+    "name": "LinkedIn",
+    "career_url": "https://careers.linkedin.com"
+  },
+  {
+    "name": "Yelp",
+    "career_url": "https://jobs.lever.co/yelp"
+  },
+  {
+    "name": "Reddit",
+    "career_url": "https://boards.greenhouse.io/reddit"
+  },
+  {
+    "name": "Naukri",
+    "career_url": "https://www.naukri.com"
+  },
+  {
+    "name": "Monster",
+    "career_url": "https://www.monster.com"
+  },
+  {
+    "name": "Shine",
+    "career_url": "https://www.shine.com"
+  },
+  {
+    "name": "Timesjobs",
+    "career_url": "https://www.timesjobs.com"
+  },
+  {
+    "name": "Foundit",
+    "career_url": "https://www.foundit.in"
+  },
+  {
+    "name": "Linkedin",
+    "career_url": "https://www.linkedin.com"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.indeed.co.in"
+  },
+  {
+    "name": "Freshersworld",
+    "career_url": "https://www.freshersworld.com"
+  },
+  {
+    "name": "Instahyre",
+    "career_url": "https://www.instahyre.com"
+  },
+  {
+    "name": "Hirist",
+    "career_url": "https://www.hirist.com"
+  },
+  {
+    "name": "Apna",
+    "career_url": "https://www.apna.co"
+  },
+  {
+    "name": "Cutshort",
+    "career_url": "https://www.cutshort.io"
+  },
+  {
+    "name": "Jobhai",
+    "career_url": "https://www.jobhai.com"
+  },
+  {
+    "name": "Drjobpro",
+    "career_url": "https://www.drjobpro.com"
+  },
+  {
+    "name": "Iimjobs",
+    "career_url": "https://www.iimjobs.com"
+  },
+  {
+    "name": "Freshersworld",
+    "career_url": "https://www.placement.freshersworld.com"
+  },
+  {
+    "name": "Gov",
+    "career_url": "https://www.employmentindia.gov.in"
+  },
+  {
+    "name": "Rozgar",
+    "career_url": "https://www.rozgar.com"
+  },
+  {
+    "name": "Quickr",
+    "career_url": "https://www.quickr.com"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.glassdoor.co.in"
+  },
+  {
+    "name": "Angellist",
+    "career_url": "https://www.angellist.com"
+  },
+  {
+    "name": "Internshala",
+    "career_url": "https://www.internshala.com"
+  },
+  {
+    "name": "Letsintern",
+    "career_url": "https://www.letsintern.com"
+  },
+  {
+    "name": "Twentyonecareers",
+    "career_url": "https://www.twentyonecareers.com"
+  },
+  {
+    "name": "Workindia",
+    "career_url": "https://www.workindia.in"
+  },
+  {
+    "name": "Jobsforher",
+    "career_url": "https://www.jobsforher.com"
+  },
+  {
+    "name": "Zigsaw",
+    "career_url": "https://www.zigsaw.in"
+  },
+  {
+    "name": "Hirect",
+    "career_url": "https://www.hirect.in"
+  },
+  {
+    "name": "Taskmo",
+    "career_url": "https://www.taskmo.in"
+  },
+  {
+    "name": "Babajob",
+    "career_url": "https://www.babajob.com"
+  },
+  {
+    "name": "Careernet",
+    "career_url": "https://www.careernet.in"
+  },
+  {
+    "name": "Jobsoid",
+    "career_url": "https://www.jobsoid.com"
+  },
+  {
+    "name": "Myamcat",
+    "career_url": "https://www.myamcat.com"
+  },
+  {
+    "name": "Aspiringminds",
+    "career_url": "https://www.aspiringminds.com"
+  },
+  {
+    "name": "Placementindia",
+    "career_url": "https://www.placementindia.com"
+  },
+  {
+    "name": "Careesma",
+    "career_url": "https://www.careesma.in"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.careerjet.co.in"
+  },
+  {
+    "name": "Jobbuzz",
+    "career_url": "https://www.jobbuzz.in"
+  },
+  {
+    "name": "Sarkariresult",
+    "career_url": "https://www.sarkariresult.com"
+  },
+  {
+    "name": "Sarkarinaukri",
+    "career_url": "https://www.sarkarinaukri.com"
+  },
+  {
+    "name": "Freejobalert",
+    "career_url": "https://www.freejobalert.com"
+  },
+  {
+    "name": "Govtjobindia",
+    "career_url": "https://www.govtjobindia.com"
+  },
+  {
+    "name": "Sscadda",
+    "career_url": "https://www.sscadda.com"
+  },
+  {
+    "name": "Bankersadda",
+    "career_url": "https://www.bankersadda.com"
+  },
+  {
+    "name": "Fresherslive",
+    "career_url": "https://www.fresherslive.com"
+  },
+  {
+    "name": "Jobringer",
+    "career_url": "https://www.jobringer.com"
+  },
+  {
+    "name": "Jobisland",
+    "career_url": "https://www.jobisland.com"
+  },
+  {
+    "name": "Wisdomjobs",
+    "career_url": "https://www.wisdomjobs.com"
+  },
+  {
+    "name": "Clickindia",
+    "career_url": "https://www.clickindia.com"
+  },
+  {
+    "name": "Sulekha",
+    "career_url": "https://www.sulekha.com"
+  },
+  {
+    "name": "Indeed",
+    "career_url": "https://www.indeed.com"
+  },
+  {
+    "name": "Dice",
+    "career_url": "https://www.dice.com"
+  },
+  {
+    "name": "Careerbuilder",
+    "career_url": "https://www.careerbuilder.com"
+  },
+  {
+    "name": "Ziprecruiter",
+    "career_url": "https://www.ziprecruiter.com"
+  },
+  {
+    "name": "Simplyhired",
+    "career_url": "https://www.simplyhired.com"
+  },
+  {
+    "name": "Snagajob",
+    "career_url": "https://www.snagajob.com"
+  },
+  {
+    "name": "Jobrapido",
+    "career_url": "https://www.jobrapido.com"
+  },
+  {
+    "name": "Trovit",
+    "career_url": "https://www.trovit.com"
+  },
+  {
+    "name": "Adzuna",
+    "career_url": "https://www.adzuna.com"
+  },
+  {
+    "name": "Jooble",
+    "career_url": "https://www.jooble.org"
+  },
+  {
+    "name": "Jobomas",
+    "career_url": "https://www.jobomas.com"
+  },
+  {
+    "name": "Mitula",
+    "career_url": "https://www.mitula.com"
+  },
+  {
+    "name": "Neuvoo",
+    "career_url": "https://www.neuvoo.com"
+  },
+  {
+    "name": "Jobted",
+    "career_url": "https://www.jobted.com"
+  },
+  {
+    "name": "Jobisjob",
+    "career_url": "https://www.jobisjob.com"
+  },
+  {
+    "name": "Careeraddict",
+    "career_url": "https://www.careeraddict.com"
+  },
+  {
+    "name": "Totaljobs",
+    "career_url": "https://www.totaljobs.com"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.reed.co.uk"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.cv-library.co.uk"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.jobsite.co.uk"
+  },
+  {
+    "name": "Jobserve",
+    "career_url": "https://www.jobserve.com"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.cwjobs.co.uk"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.technojobs.co.uk"
+  },
+  {
+    "name": "Milkround",
+    "career_url": "https://www.milkround.com"
+  },
+  {
+    "name": "Ac",
+    "career_url": "https://www.prospects.ac.uk"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.targetjobs.co.uk"
+  },
+  {
+    "name": "Allaboutcareers",
+    "career_url": "https://www.allaboutcareers.com"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.charityjob.co.uk"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.fish4.co.uk"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.guardian.co.uk/jobs"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.telegraph.co.uk/jobs"
+  },
+  {
+    "name": "Tiptopjob",
+    "career_url": "https://www.tiptopjob.com"
+  },
+  {
+    "name": "Experteer",
+    "career_url": "https://www.experteer.com"
+  },
+  {
+    "name": "Eurojobs",
+    "career_url": "https://www.eurojobs.com"
+  },
+  {
+    "name": "Eurobrussels",
+    "career_url": "https://www.eurobrussels.com"
+  },
+  {
+    "name": "Europa",
+    "career_url": "https://www.eures.europa.eu"
+  },
+  {
+    "name": "Monster",
+    "career_url": "https://www.monster.ca"
+  },
+  {
+    "name": "Workopolis",
+    "career_url": "https://www.workopolis.com"
+  },
+  {
+    "name": "Eluta",
+    "career_url": "https://www.eluta.ca"
+  },
+  {
+    "name": "Gc",
+    "career_url": "https://www.jobbank.gc.ca"
+  },
+  {
+    "name": "Wowjobs",
+    "career_url": "https://www.wowjobs.ca"
+  },
+  {
+    "name": "Com",
+    "career_url": "https://www.seek.com.au"
+  },
+  {
+    "name": "Com",
+    "career_url": "https://www.careerone.com.au"
+  },
+  {
+    "name": "Gov",
+    "career_url": "https://www.jobsearch.gov.au"
+  },
+  {
+    "name": "Com",
+    "career_url": "https://www.ethicaljobs.com.au"
+  },
+  {
+    "name": "Com",
+    "career_url": "https://www.gumtree.com.au"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.seek.co.nz"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.trademe.co.nz"
+  },
+  {
+    "name": "Govt",
+    "career_url": "https://www.careers.govt.nz"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.myjobnow.co.nz"
+  },
+  {
+    "name": "Stackoverflow",
+    "career_url": "https://www.stackoverflow.com/jobs"
+  },
+  {
+    "name": "Github",
+    "career_url": "https://www.github.com/jobs"
+  },
+  {
+    "name": "Wellfound",
+    "career_url": "https://www.wellfound.com"
+  },
+  {
+    "name": "Cybercoders",
+    "career_url": "https://www.cybercoders.com"
+  },
+  {
+    "name": "Techjobsforgood",
+    "career_url": "https://www.techjobsforgood.com"
+  },
+  {
+    "name": "Techfetch",
+    "career_url": "https://www.techfetch.com"
+  },
+  {
+    "name": "Techcareers",
+    "career_url": "https://www.techcareers.com"
+  },
+  {
+    "name": "Icrunchdata",
+    "career_url": "https://www.icrunchdata.com"
+  },
+  {
+    "name": "Kaggle",
+    "career_url": "https://www.kaggle.com/jobs"
+  },
+  {
+    "name": "Towardsdatascience",
+    "career_url": "https://www.towardsdatascience.com/jobs"
+  },
+  {
+    "name": "Aimultiple",
+    "career_url": "https://www.aimultiple.com"
+  },
+  {
+    "name": "Authentic",
+    "career_url": "https://www.authentic.com"
+  },
+  {
+    "name": "Hired",
+    "career_url": "https://www.hired.com"
+  },
+  {
+    "name": "Triplebyte",
+    "career_url": "https://www.triplebyte.com"
+  },
+  {
+    "name": "Turing",
+    "career_url": "https://www.turing.com"
+  },
+  {
+    "name": "Toptal",
+    "career_url": "https://www.toptal.com"
+  },
+  {
+    "name": "Gun",
+    "career_url": "https://www.gun.io"
+  },
+  {
+    "name": "X-team",
+    "career_url": "https://www.x-team.com"
+  },
+  {
+    "name": "Working-nomads",
+    "career_url": "https://www.working-nomads.com"
+  },
+  {
+    "name": "Landing",
+    "career_url": "https://www.landing.jobs"
+  },
+  {
+    "name": "Honeypot",
+    "career_url": "https://www.honeypot.io"
+  },
+  {
+    "name": "Whoishiring",
+    "career_url": "https://www.whoishiring.io"
+  },
+  {
+    "name": "Findwork",
+    "career_url": "https://www.findwork.dev"
+  },
+  {
+    "name": "Reactjobsboard",
+    "career_url": "https://www.reactjobsboard.com"
+  },
+  {
+    "name": "Vuejobs",
+    "career_url": "https://www.vuejobs.com"
+  },
+  {
+    "name": "Angularjobs",
+    "career_url": "https://www.angularjobs.com"
+  },
+  {
+    "name": "Github",
+    "career_url": "https://www.pythonjobs.github.io"
+  },
+  {
+    "name": "Rubynow",
+    "career_url": "https://www.rubynow.com"
+  },
+  {
+    "name": "Javacodegeeks",
+    "career_url": "https://www.javacodegeeks.com"
+  },
+  {
+    "name": "Phpjobs",
+    "career_url": "https://www.phpjobs.com"
+  },
+  {
+    "name": "Larajobs",
+    "career_url": "https://www.larajobs.com"
+  },
+  {
+    "name": "Nodejobs",
+    "career_url": "https://www.nodejobs.com"
+  },
+  {
+    "name": "Gojobs",
+    "career_url": "https://www.gojobs.io"
+  },
+  {
+    "name": "Rustjobs",
+    "career_url": "https://www.rustjobs.dev"
+  },
+  {
+    "name": "Djangojobs",
+    "career_url": "https://www.djangojobs.net"
+  },
+  {
+    "name": "Flask",
+    "career_url": "https://www.flask.jobs"
+  },
+  {
+    "name": "Rubyonrails",
+    "career_url": "https://www.rubyonrails.org/jobs"
+  },
+  {
+    "name": "Scala-jobs",
+    "career_url": "https://www.scala-jobs.com"
+  },
+  {
+    "name": "Kotlinjobs",
+    "career_url": "https://www.kotlinjobs.com"
+  },
+  {
+    "name": "Swiftjobs",
+    "career_url": "https://www.swiftjobs.io"
+  },
+  {
+    "name": "Iosjobs",
+    "career_url": "https://www.iosjobs.io"
+  },
+  {
+    "name": "Androidjobs",
+    "career_url": "https://www.androidjobs.io"
+  },
+  {
+    "name": "Mobilenativejobs",
+    "career_url": "https://www.mobilenativejobs.com"
+  },
+  {
+    "name": "Reactnative",
+    "career_url": "https://www.reactnative.jobs"
+  },
+  {
+    "name": "Flutterjobs",
+    "career_url": "https://www.flutterjobs.info"
+  },
+  {
+    "name": "Xamarinjobs",
+    "career_url": "https://www.xamarinjobs.com"
+  },
+  {
+    "name": "Unity3d",
+    "career_url": "https://www.unity3d.com/jobs"
+  },
+  {
+    "name": "Unrealengine",
+    "career_url": "https://www.unrealengine.com/careers"
+  },
+  {
+    "name": "Gamedevjobs",
+    "career_url": "https://www.gamedevjobs.io"
+  },
+  {
+    "name": "Gamejobs",
+    "career_url": "https://www.gamejobs.com"
+  },
+  {
+    "name": "Gameindustry",
+    "career_url": "https://www.gameindustry.eu"
+  },
+  {
+    "name": "Hitmarker",
+    "career_url": "https://www.hitmarker.net"
+  },
+  {
+    "name": "Remotegamejobs",
+    "career_url": "https://www.remotegamejobs.com"
+  },
+  {
+    "name": "Devopsprojectshq",
+    "career_url": "https://www.devopsprojectshq.com"
+  },
+  {
+    "name": "Devopsjobs",
+    "career_url": "https://www.devopsjobs.net"
+  },
+  {
+    "name": "Cloudplatformonline",
+    "career_url": "https://www.cloudplatformonline.com"
+  },
+  {
+    "name": "Awsjobs",
+    "career_url": "https://www.awsjobs.net"
+  },
+  {
+    "name": "Azurejobs",
+    "career_url": "https://www.azurejobs.net"
+  },
+  {
+    "name": "Gcpjobs",
+    "career_url": "https://www.gcpjobs.net"
+  },
+  {
+    "name": "Kubernetescareers",
+    "career_url": "https://www.kubernetescareers.com"
+  },
+  {
+    "name": "Dockerjobs",
+    "career_url": "https://www.dockerjobs.com"
+  },
+  {
+    "name": "Blockchainjobs",
+    "career_url": "https://www.blockchainjobs.com"
+  },
+  {
+    "name": "Cryptojobslist",
+    "career_url": "https://www.cryptojobslist.com"
+  },
+  {
+    "name": "Web3",
+    "career_url": "https://www.web3.career"
+  },
+  {
+    "name": "Cryptocurrencyjobs",
+    "career_url": "https://www.cryptocurrencyjobs.co"
+  },
+  {
+    "name": "Blocktribe",
+    "career_url": "https://www.blocktribe.com"
+  },
+  {
+    "name": "Ethjobs",
+    "career_url": "https://www.ethjobs.xyz"
+  },
+  {
+    "name": "Solana",
+    "career_url": "https://www.solana.com/jobs"
+  },
+  {
+    "name": "Aijobs",
+    "career_url": "https://www.aijobs.net"
+  },
+  {
+    "name": "Aijobs",
+    "career_url": "https://www.aijobs.com"
+  },
+  {
+    "name": "Machinelearningjobs",
+    "career_url": "https://www.machinelearningjobs.com"
+  },
+  {
+    "name": "Deeplearningjobs",
+    "career_url": "https://www.deeplearningjobs.com"
+  },
+  {
+    "name": "Datascience",
+    "career_url": "https://www.datascience.com"
+  },
+  {
+    "name": "Kdnuggets",
+    "career_url": "https://www.kdnuggets.com/jobs"
+  },
+  {
+    "name": "Datajobs",
+    "career_url": "https://www.datajobs.com"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.analyticsjobs.co.uk"
+  },
+  {
+    "name": "Bigjobsboard",
+    "career_url": "https://www.bigjobsboard.com"
+  },
+  {
+    "name": "Dataengineeringjobs",
+    "career_url": "https://www.dataengineeringjobs.com"
+  },
+  {
+    "name": "Mlcontests",
+    "career_url": "https://www.mlcontests.com"
+  },
+  {
+    "name": "Cybersecurityjobs",
+    "career_url": "https://www.cybersecurityjobs.com"
+  },
+  {
+    "name": "Infosec-jobs",
+    "career_url": "https://www.infosec-jobs.com"
+  },
+  {
+    "name": "Securitycareers",
+    "career_url": "https://www.securitycareers.com"
+  },
+  {
+    "name": "Cyberseek",
+    "career_url": "https://www.cyberseek.org"
+  },
+  {
+    "name": "Clearancejobs",
+    "career_url": "https://www.clearancejobs.com"
+  },
+  {
+    "name": "Ethicalhacker",
+    "career_url": "https://www.ethicalhacker.net"
+  },
+  {
+    "name": "Pentesterjobs",
+    "career_url": "https://www.pentesterjobs.com"
+  },
+  {
+    "name": "Forensicfocus",
+    "career_url": "https://www.forensicfocus.com"
+  },
+  {
+    "name": "Cloudcareer",
+    "career_url": "https://www.cloudcareer.io"
+  },
+  {
+    "name": "Networkingjobs",
+    "career_url": "https://www.networkingjobs.com"
+  },
+  {
+    "name": "Cisco",
+    "career_url": "https://www.cisco.com/careers"
+  },
+  {
+    "name": "Salesforce",
+    "career_url": "https://www.salesforce.com/careers"
+  },
+  {
+    "name": "Sap",
+    "career_url": "https://www.sap.com/careers"
+  },
+  {
+    "name": "Oracle",
+    "career_url": "https://www.oracle.com/careers"
+  },
+  {
+    "name": "Erpjobs",
+    "career_url": "https://www.erpjobs.com"
+  },
+  {
+    "name": "Sapcareers",
+    "career_url": "https://www.sapcareers.com"
+  },
+  {
+    "name": "Salesforceben",
+    "career_url": "https://www.salesforceben.com/jobs"
+  },
+  {
+    "name": "Workday",
+    "career_url": "https://www.workday.com/careers"
+  },
+  {
+    "name": "Servicenow",
+    "career_url": "https://www.servicenow.com/careers"
+  },
+  {
+    "name": "Atlassian",
+    "career_url": "https://www.atlassian.com/careers"
+  },
+  {
+    "name": "Remote",
+    "career_url": "https://www.remote.co"
+  },
+  {
+    "name": "Weworkremotely",
+    "career_url": "https://www.weworkremotely.com"
+  },
+  {
+    "name": "Remoteok",
+    "career_url": "https://www.remoteok.io"
+  },
+  {
+    "name": "Remoters",
+    "career_url": "https://www.remoters.net"
+  },
+  {
+    "name": "Remotive",
+    "career_url": "https://www.remotive.io"
+  },
+  {
+    "name": "Workfromhomejobs",
+    "career_url": "https://www.workfromhomejobs.com"
+  },
+  {
+    "name": "Remotejobs",
+    "career_url": "https://www.remotejobs.com"
+  },
+  {
+    "name": "Flexjobs",
+    "career_url": "https://www.flexjobs.com"
+  },
+  {
+    "name": "Remote4me",
+    "career_url": "https://www.remote4me.com"
+  },
+  {
+    "name": "Jobspresso",
+    "career_url": "https://www.jobspresso.co"
+  },
+  {
+    "name": "Outsourcely",
+    "career_url": "https://www.outsourcely.com"
+  },
+  {
+    "name": "Remotewoman",
+    "career_url": "https://www.remotewoman.com"
+  },
+  {
+    "name": "Remoteleaf",
+    "career_url": "https://www.remoteleaf.com"
+  },
+  {
+    "name": "Remoteworkhub",
+    "career_url": "https://www.remoteworkhub.com"
+  },
+  {
+    "name": "Remoteco",
+    "career_url": "https://www.remoteco.com"
+  },
+  {
+    "name": "Powertofly",
+    "career_url": "https://www.powertofly.com"
+  },
+  {
+    "name": "Europeremotely",
+    "career_url": "https://www.europeremotely.com"
+  },
+  {
+    "name": "Workingnomads",
+    "career_url": "https://www.workingnomads.co"
+  },
+  {
+    "name": "Nodesk",
+    "career_url": "https://www.nodesk.co"
+  },
+  {
+    "name": "Remote",
+    "career_url": "https://www.remote.tools"
+  },
+  {
+    "name": "Upwork",
+    "career_url": "https://www.upwork.com"
+  },
+  {
+    "name": "Fiverr",
+    "career_url": "https://www.fiverr.com"
+  },
+  {
+    "name": "Freelancer",
+    "career_url": "https://www.freelancer.com"
+  },
+  {
+    "name": "Guru",
+    "career_url": "https://www.guru.com"
+  },
+  {
+    "name": "Peopleperhour",
+    "career_url": "https://www.peopleperhour.com"
+  },
+  {
+    "name": "Workana",
+    "career_url": "https://www.workana.com"
+  },
+  {
+    "name": "99designs",
+    "career_url": "https://www.99designs.com"
+  },
+  {
+    "name": "Designcrowd",
+    "career_url": "https://www.designcrowd.com"
+  },
+  {
+    "name": "Crowdspring",
+    "career_url": "https://www.crowdspring.com"
+  },
+  {
+    "name": "Designhill",
+    "career_url": "https://www.designhill.com"
+  },
+  {
+    "name": "Thumbtack",
+    "career_url": "https://www.thumbtack.com"
+  },
+  {
+    "name": "Bark",
+    "career_url": "https://www.bark.com"
+  },
+  {
+    "name": "Truelancer",
+    "career_url": "https://www.truelancer.com"
+  },
+  {
+    "name": "Worknhire",
+    "career_url": "https://www.worknhire.com"
+  },
+  {
+    "name": "Freelancerindia",
+    "career_url": "https://www.freelancerindia.com"
+  },
+  {
+    "name": "Gigster",
+    "career_url": "https://www.gigster.com"
+  },
+  {
+    "name": "Codeable",
+    "career_url": "https://www.codeable.io"
+  },
+  {
+    "name": "Coworks",
+    "career_url": "https://www.coworks.com"
+  },
+  {
+    "name": "Remotemore",
+    "career_url": "https://www.remotemore.com"
+  },
+  {
+    "name": "Contently",
+    "career_url": "https://www.contently.com"
+  },
+  {
+    "name": "Mediabistro",
+    "career_url": "https://www.mediabistro.com"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.journalism.co.uk"
+  },
+  {
+    "name": "Contentwriters",
+    "career_url": "https://www.contentwriters.com"
+  },
+  {
+    "name": "Writejobs",
+    "career_url": "https://www.writejobs.com"
+  },
+  {
+    "name": "Problogger",
+    "career_url": "https://www.problogger.com/jobs"
+  },
+  {
+    "name": "Freelancewriting",
+    "career_url": "https://www.freelancewriting.com"
+  },
+  {
+    "name": "Freelancewritinggigs",
+    "career_url": "https://www.freelancewritinggigs.com"
+  },
+  {
+    "name": "Writingjobs",
+    "career_url": "https://www.writingjobs.com"
+  },
+  {
+    "name": "Bloggingtips",
+    "career_url": "https://www.bloggingtips.com"
+  },
+  {
+    "name": "Translate",
+    "career_url": "https://www.translate.com"
+  },
+  {
+    "name": "Proz",
+    "career_url": "https://www.proz.com"
+  },
+  {
+    "name": "Translatorscafe",
+    "career_url": "https://www.translatorscafe.com"
+  },
+  {
+    "name": "Smartcat",
+    "career_url": "https://www.smartcat.com"
+  },
+  {
+    "name": "Gengo",
+    "career_url": "https://www.gengo.com"
+  },
+  {
+    "name": "Onehourtranslation",
+    "career_url": "https://www.onehourtranslation.com"
+  },
+  {
+    "name": "Unbabel",
+    "career_url": "https://www.unbabel.com"
+  },
+  {
+    "name": "Lionbridge",
+    "career_url": "https://www.lionbridge.com"
+  },
+  {
+    "name": "Appen",
+    "career_url": "https://www.appen.com"
+  },
+  {
+    "name": "Teemwork",
+    "career_url": "https://www.teemwork.ai"
+  },
+  {
+    "name": "Rev",
+    "career_url": "https://www.rev.com"
+  },
+  {
+    "name": "Scribie",
+    "career_url": "https://www.scribie.com"
+  },
+  {
+    "name": "Gotranscript",
+    "career_url": "https://www.gotranscript.com"
+  },
+  {
+    "name": "Transcribeme",
+    "career_url": "https://www.transcribeme.com"
+  },
+  {
+    "name": "Tigerfish",
+    "career_url": "https://www.tigerfish.com"
+  },
+  {
+    "name": "Voicebunny",
+    "career_url": "https://www.voicebunny.com"
+  },
+  {
+    "name": "Voices",
+    "career_url": "https://www.voices.com"
+  },
+  {
+    "name": "Voice123",
+    "career_url": "https://www.voice123.com"
+  },
+  {
+    "name": "Bodalgo",
+    "career_url": "https://www.bodalgo.com"
+  },
+  {
+    "name": "Casting",
+    "career_url": "https://www.casting.com"
+  },
+  {
+    "name": "Behance",
+    "career_url": "https://www.behance.net"
+  },
+  {
+    "name": "Dribbble",
+    "career_url": "https://www.dribbble.com"
+  },
+  {
+    "name": "Coroflot",
+    "career_url": "https://www.coroflot.com"
+  },
+  {
+    "name": "Creativepool",
+    "career_url": "https://www.creativepool.com"
+  },
+  {
+    "name": "Creativehotlist",
+    "career_url": "https://www.creativehotlist.com"
+  },
+  {
+    "name": "Krop",
+    "career_url": "https://www.krop.com"
+  },
+  {
+    "name": "Authenticjobs",
+    "career_url": "https://www.authenticjobs.com"
+  },
+  {
+    "name": "Onespace",
+    "career_url": "https://www.onespace.com"
+  },
+  {
+    "name": "Taskrabbit",
+    "career_url": "https://www.taskrabbit.com"
+  },
+  {
+    "name": "Airtasker",
+    "career_url": "https://www.airtasker.com"
+  },
+  {
+    "name": "Gigwalk",
+    "career_url": "https://www.gigwalk.com"
+  },
+  {
+    "name": "Fieldagent",
+    "career_url": "https://www.fieldagent.net"
+  },
+  {
+    "name": "Wonolo",
+    "career_url": "https://www.wonolo.com"
+  },
+  {
+    "name": "Shiftgig",
+    "career_url": "https://www.shiftgig.com"
+  },
+  {
+    "name": "Qwick",
+    "career_url": "https://www.qwick.com"
+  },
+  {
+    "name": "Instawork",
+    "career_url": "https://www.instawork.com"
+  },
+  {
+    "name": "Jobjuice",
+    "career_url": "https://www.jobjuice.com"
+  },
+  {
+    "name": "Traitly",
+    "career_url": "https://www.traitly.com"
+  },
+  {
+    "name": "Bestwriters",
+    "career_url": "https://www.bestwriters.com"
+  },
+  {
+    "name": "Textbroker",
+    "career_url": "https://www.textbroker.com"
+  },
+  {
+    "name": "Copify",
+    "career_url": "https://www.copify.com"
+  },
+  {
+    "name": "Contentfly",
+    "career_url": "https://www.contentfly.com"
+  },
+  {
+    "name": "Crowd",
+    "career_url": "https://www.crowd.com"
+  },
+  {
+    "name": "Skyword",
+    "career_url": "https://www.skyword.com"
+  },
+  {
+    "name": "Newscred",
+    "career_url": "https://www.newscred.com"
+  },
+  {
+    "name": "Kapost",
+    "career_url": "https://www.kapost.com"
+  },
+  {
+    "name": "Contentmart",
+    "career_url": "https://www.contentmart.com"
+  },
+  {
+    "name": "Contentwriters",
+    "career_url": "https://www.contentwriters.net"
+  },
+  {
+    "name": "Hirable",
+    "career_url": "https://www.hirable.com"
+  },
+  {
+    "name": "Jornaya",
+    "career_url": "https://www.jornaya.com"
+  },
+  {
+    "name": "Efinancialcareers",
+    "career_url": "https://www.efinancialcareers.com"
+  },
+  {
+    "name": "Wallstreetoasis",
+    "career_url": "https://www.wallstreetoasis.com"
+  },
+  {
+    "name": "Mergersandinquisitions",
+    "career_url": "https://www.mergersandinquisitions.com"
+  },
+  {
+    "name": "Selbyjennings",
+    "career_url": "https://www.selbyjennings.com"
+  },
+  {
+    "name": "Robertwalters",
+    "career_url": "https://www.robertwalters.com"
+  },
+  {
+    "name": "Michaelpage",
+    "career_url": "https://www.michaelpage.com"
+  },
+  {
+    "name": "Pagegroup",
+    "career_url": "https://www.pagegroup.com"
+  },
+  {
+    "name": "Hays",
+    "career_url": "https://www.hays.com"
+  },
+  {
+    "name": "Randstad",
+    "career_url": "https://www.randstad.com"
+  },
+  {
+    "name": "Manpower",
+    "career_url": "https://www.manpower.com"
+  },
+  {
+    "name": "Adecco",
+    "career_url": "https://www.adecco.com"
+  },
+  {
+    "name": "Kellyservices",
+    "career_url": "https://www.kellyservices.com"
+  },
+  {
+    "name": "Accountingfly",
+    "career_url": "https://www.accountingfly.com"
+  },
+  {
+    "name": "Accountingtoday",
+    "career_url": "https://www.jobs.accountingtoday.com"
+  },
+  {
+    "name": "Cpa",
+    "career_url": "https://www.cpa.com"
+  },
+  {
+    "name": "Journalofaccountancy",
+    "career_url": "https://www.journalofaccountancy.com"
+  },
+  {
+    "name": "Accountemps",
+    "career_url": "https://www.accountemps.com"
+  },
+  {
+    "name": "Roberthalf",
+    "career_url": "https://www.roberthalf.com"
+  },
+  {
+    "name": "Aicpa",
+    "career_url": "https://www.aicpa.org/career"
+  },
+  {
+    "name": "Cfainstitute",
+    "career_url": "https://www.cfainstitute.org/careers"
+  },
+  {
+    "name": "Cfp",
+    "career_url": "https://www.cfp.net"
+  },
+  {
+    "name": "Finra",
+    "career_url": "https://www.finra.org/careers"
+  },
+  {
+    "name": "Sec",
+    "career_url": "https://www.sec.gov/jobs"
+  },
+  {
+    "name": "Bankjobs",
+    "career_url": "https://www.bankjobs.com"
+  },
+  {
+    "name": "Insurancejobs",
+    "career_url": "https://www.insurancejobs.com"
+  },
+  {
+    "name": "Actuaryjobs",
+    "career_url": "https://www.actuaryjobs.com"
+  },
+  {
+    "name": "Dwsimpson",
+    "career_url": "https://www.dwsimpson.com"
+  },
+  {
+    "name": "Ezra",
+    "career_url": "https://www.ezra.com"
+  },
+  {
+    "name": "Actuarialjobs",
+    "career_url": "https://www.actuarialjobs.com"
+  },
+  {
+    "name": "Investmentjobs",
+    "career_url": "https://www.investmentjobs.com"
+  },
+  {
+    "name": "Healthcarejobs",
+    "career_url": "https://www.healthcarejobs.com"
+  },
+  {
+    "name": "Health-care-jobs",
+    "career_url": "https://www.health-care-jobs.net"
+  },
+  {
+    "name": "Healthecareers",
+    "career_url": "https://www.healthecareers.com"
+  },
+  {
+    "name": "Practicematch",
+    "career_url": "https://www.practicematch.com"
+  },
+  {
+    "name": "Physiciansjobs",
+    "career_url": "https://www.physiciansjobs.com"
+  },
+  {
+    "name": "Nejm",
+    "career_url": "https://www.nejm.org/career"
+  },
+  {
+    "name": "Jama",
+    "career_url": "https://www.jama.com/careers"
+  },
+  {
+    "name": "Bmj",
+    "career_url": "https://www.bmj.com/jobs"
+  },
+  {
+    "name": "Thelancet",
+    "career_url": "https://www.thelancet.com/careers"
+  },
+  {
+    "name": "Nature",
+    "career_url": "https://www.nature.com/naturecareers"
+  },
+  {
+    "name": "Sciencecareers",
+    "career_url": "https://www.jobs.sciencecareers.org"
+  },
+  {
+    "name": "Medzilla",
+    "career_url": "https://www.medzilla.com"
+  },
+  {
+    "name": "Biospace",
+    "career_url": "https://www.biospace.com"
+  },
+  {
+    "name": "Biocareer",
+    "career_url": "https://www.biocareer.com"
+  },
+  {
+    "name": "Medscape",
+    "career_url": "https://www.medscape.com/jobs"
+  },
+  {
+    "name": "Nurse",
+    "career_url": "https://www.nurse.com"
+  },
+  {
+    "name": "Nursingjobs",
+    "career_url": "https://www.nursingjobs.com"
+  },
+  {
+    "name": "Allnurses",
+    "career_url": "https://www.allnurses.com"
+  },
+  {
+    "name": "Healthjobs",
+    "career_url": "https://www.healthjobs.com"
+  },
+  {
+    "name": "Medhunters",
+    "career_url": "https://www.medhunters.com"
+  },
+  {
+    "name": "Dentaljobs",
+    "career_url": "https://www.dentaljobs.com"
+  },
+  {
+    "name": "Dentalcare",
+    "career_url": "https://www.dentalcare.com"
+  },
+  {
+    "name": "Veterinaryjobs",
+    "career_url": "https://www.veterinaryjobs.com"
+  },
+  {
+    "name": "Vetsurgeon",
+    "career_url": "https://www.vetsurgeon.org"
+  },
+  {
+    "name": "Pharmacist",
+    "career_url": "https://www.pharmacist.com"
+  },
+  {
+    "name": "Pharmacyjobs",
+    "career_url": "https://www.pharmacyjobs.com"
+  },
+  {
+    "name": "Physicaljobs",
+    "career_url": "https://www.physicaljobs.com"
+  },
+  {
+    "name": "Medicaldevicejobs",
+    "career_url": "https://www.medicaldevicejobs.com"
+  },
+  {
+    "name": "Biopharmguy",
+    "career_url": "https://www.biopharmguy.com"
+  },
+  {
+    "name": "Pharmiweb",
+    "career_url": "https://www.pharmiweb.jobs"
+  },
+  {
+    "name": "Higheredjobs",
+    "career_url": "https://www.higheredjobs.com"
+  },
+  {
+    "name": "Academicjobsonline",
+    "career_url": "https://www.academicjobsonline.org"
+  },
+  {
+    "name": "Chronicle",
+    "career_url": "https://www.chronicle.com/jobs"
+  },
+  {
+    "name": "Insidehighered",
+    "career_url": "https://www.insidehighered.com/careers"
+  },
+  {
+    "name": "Timeshighereducation",
+    "career_url": "https://www.timeshighereducation.com/unijobs"
+  },
+  {
+    "name": "Academickeys",
+    "career_url": "https://www.academickeys.com"
+  },
+  {
+    "name": "Ac",
+    "career_url": "https://www.jobs.ac.uk"
+  },
+  {
+    "name": "Academicpositions",
+    "career_url": "https://www.academicpositions.com"
+  },
+  {
+    "name": "Europa",
+    "career_url": "https://www.euraxess.ec.europa.eu"
+  },
+  {
+    "name": "Scholarshipsads",
+    "career_url": "https://www.scholarshipsads.com"
+  },
+  {
+    "name": "Research",
+    "career_url": "https://www.research.com"
+  },
+  {
+    "name": "Findaphd",
+    "career_url": "https://www.findaphd.com"
+  },
+  {
+    "name": "Phds",
+    "career_url": "https://www.jobs.phds.org"
+  },
+  {
+    "name": "Academiccareer",
+    "career_url": "https://www.academiccareer.com"
+  },
+  {
+    "name": "Schoolspring",
+    "career_url": "https://www.schoolspring.com"
+  },
+  {
+    "name": "K12jobspot",
+    "career_url": "https://www.k12jobspot.com"
+  },
+  {
+    "name": "Teachers-teachers",
+    "career_url": "https://www.teachers-teachers.com"
+  },
+  {
+    "name": "Education",
+    "career_url": "https://www.education.com/careers"
+  },
+  {
+    "name": "Teach",
+    "career_url": "https://www.teach.com"
+  },
+  {
+    "name": "Teachaway",
+    "career_url": "https://www.teachaway.com"
+  },
+  {
+    "name": "Eslcafe",
+    "career_url": "https://www.eslcafe.com"
+  },
+  {
+    "name": "Daveseslcafe",
+    "career_url": "https://www.daveseslcafe.com"
+  },
+  {
+    "name": "Tefl",
+    "career_url": "https://www.tefl.com"
+  },
+  {
+    "name": "Onlineteflcourse",
+    "career_url": "https://www.onlineteflcourse.com"
+  },
+  {
+    "name": "Teachingnomad",
+    "career_url": "https://www.teachingnomad.com"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.teachertoolkit.co.uk"
+  },
+  {
+    "name": "Tes",
+    "career_url": "https://www.tes.com/jobs"
+  },
+  {
+    "name": "Teachingabroad",
+    "career_url": "https://www.teachingabroad.net"
+  },
+  {
+    "name": "Goabroad",
+    "career_url": "https://www.goabroad.com"
+  },
+  {
+    "name": "Transitionsabroad",
+    "career_url": "https://www.transitionsabroad.com"
+  },
+  {
+    "name": "Engineerjobs",
+    "career_url": "https://www.engineerjobs.com"
+  },
+  {
+    "name": "Engineeringjobs",
+    "career_url": "https://www.engineeringjobs.com"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.theengineer.co.uk"
+  },
+  {
+    "name": "Engineeringcareers",
+    "career_url": "https://www.engineeringcareers.org"
+  },
+  {
+    "name": "Ieee",
+    "career_url": "https://www.ieee.org/jobs"
+  },
+  {
+    "name": "Asme",
+    "career_url": "https://www.asme.org/career"
+  },
+  {
+    "name": "Asce",
+    "career_url": "https://www.asce.org/career"
+  },
+  {
+    "name": "Aiaa",
+    "career_url": "https://www.aiaa.org/careers"
+  },
+  {
+    "name": "Mechanicalengineering",
+    "career_url": "https://www.mechanicalengineering.com"
+  },
+  {
+    "name": "Chemicalengineering",
+    "career_url": "https://www.chemicalengineering.com"
+  },
+  {
+    "name": "Civilengineering",
+    "career_url": "https://www.civilengineering.com"
+  },
+  {
+    "name": "Electricalengineering",
+    "career_url": "https://www.electricalengineering.com"
+  },
+  {
+    "name": "Processengineering",
+    "career_url": "https://www.processengineering.com"
+  },
+  {
+    "name": "Aerospaceengineering",
+    "career_url": "https://www.aerospaceengineering.com"
+  },
+  {
+    "name": "Biomedicalengineering",
+    "career_url": "https://www.biomedicalengineering.com"
+  },
+  {
+    "name": "Petroleumengineering",
+    "career_url": "https://www.petroleumengineering.com"
+  },
+  {
+    "name": "Miningjobs",
+    "career_url": "https://www.miningjobs.com"
+  },
+  {
+    "name": "Oilandgasjobsearch",
+    "career_url": "https://www.oilandgasjobsearch.com"
+  },
+  {
+    "name": "Energy-jobs",
+    "career_url": "https://www.energy-jobs.org"
+  },
+  {
+    "name": "Renewableenergyjobs",
+    "career_url": "https://www.renewableenergyjobs.com"
+  },
+  {
+    "name": "Solarpowerrocks",
+    "career_url": "https://www.solarpowerrocks.com"
+  },
+  {
+    "name": "Windjobs",
+    "career_url": "https://www.windjobs.net"
+  },
+  {
+    "name": "Automotivejobs",
+    "career_url": "https://www.automotivejobs.com"
+  },
+  {
+    "name": "Sae",
+    "career_url": "https://www.sae.org/careers"
+  },
+  {
+    "name": "Manufacturingjobs",
+    "career_url": "https://www.manufacturingjobs.com"
+  },
+  {
+    "name": "Factoryfix",
+    "career_url": "https://www.factoryfix.com"
+  },
+  {
+    "name": "Productionjobs",
+    "career_url": "https://www.productionjobs.com"
+  },
+  {
+    "name": "Qualityjobs",
+    "career_url": "https://www.qualityjobs.com"
+  },
+  {
+    "name": "Maintenancejobs",
+    "career_url": "https://www.maintenancejobs.com"
+  },
+  {
+    "name": "Constructionjobs",
+    "career_url": "https://www.constructionjobs.com"
+  },
+  {
+    "name": "Marketingjobs",
+    "career_url": "https://www.marketingjobs.com"
+  },
+  {
+    "name": "Talentbin",
+    "career_url": "https://www.talentbin.com"
+  },
+  {
+    "name": "Advertisingjobs",
+    "career_url": "https://www.advertisingjobs.com"
+  },
+  {
+    "name": "Prweekjobs",
+    "career_url": "https://www.prweekjobs.com"
+  },
+  {
+    "name": "Journalism",
+    "career_url": "https://www.jobs.journalism.com"
+  },
+  {
+    "name": "Marketinghire",
+    "career_url": "https://www.marketinghire.com"
+  },
+  {
+    "name": "Salesjobs",
+    "career_url": "https://www.salesjobs.com"
+  },
+  {
+    "name": "Salesgravy",
+    "career_url": "https://www.salesgravy.com"
+  },
+  {
+    "name": "Saleshacker",
+    "career_url": "https://www.saleshacker.com"
+  },
+  {
+    "name": "Sales",
+    "career_url": "https://www.sales.org"
+  },
+  {
+    "name": "Sellmoresaas",
+    "career_url": "https://www.sellmoresaas.com"
+  },
+  {
+    "name": "Repvue",
+    "career_url": "https://www.repvue.com"
+  },
+  {
+    "name": "Sdrleader",
+    "career_url": "https://www.sdrleader.com"
+  },
+  {
+    "name": "Revenue",
+    "career_url": "https://www.revenue.io"
+  },
+  {
+    "name": "Demandgenjobs",
+    "career_url": "https://www.demandgenjobs.com"
+  },
+  {
+    "name": "Contentmarketingjobs",
+    "career_url": "https://www.contentmarketingjobs.com"
+  },
+  {
+    "name": "Inboundmarketingjobs",
+    "career_url": "https://www.inboundmarketingjobs.com"
+  },
+  {
+    "name": "Seojobs",
+    "career_url": "https://www.seojobs.com"
+  },
+  {
+    "name": "Ppccareers",
+    "career_url": "https://www.ppccareers.com"
+  },
+  {
+    "name": "Socialmediacareer",
+    "career_url": "https://www.socialmediacareer.com"
+  },
+  {
+    "name": "Emailmarketingjobs",
+    "career_url": "https://www.emailmarketingjobs.com"
+  },
+  {
+    "name": "Growthhackers",
+    "career_url": "https://www.growthhackers.com"
+  },
+  {
+    "name": "Marketingprofs",
+    "career_url": "https://www.marketingprofs.com"
+  },
+  {
+    "name": "Ama",
+    "career_url": "https://www.ama.org/careers"
+  },
+  {
+    "name": "Maa",
+    "career_url": "https://www.maa.org/careers"
+  },
+  {
+    "name": "Influencermarketingjobs",
+    "career_url": "https://www.influencermarketingjobs.com"
+  },
+  {
+    "name": "Brandmarketingjobs",
+    "career_url": "https://www.brandmarketingjobs.com"
+  },
+  {
+    "name": "Productmarketingjobs",
+    "career_url": "https://www.productmarketingjobs.com"
+  },
+  {
+    "name": "Eventmarketer",
+    "career_url": "https://www.eventmarketer.com"
+  },
+  {
+    "name": "Lawjobs",
+    "career_url": "https://www.lawjobs.com"
+  },
+  {
+    "name": "Legaljobs",
+    "career_url": "https://www.legaljobs.com"
+  },
+  {
+    "name": "Indeed",
+    "career_url": "https://www.indeed.com/legal"
+  },
+  {
+    "name": "Legalstaff",
+    "career_url": "https://www.legalstaff.com"
+  },
+  {
+    "name": "Lawcrossing",
+    "career_url": "https://www.lawcrossing.com"
+  },
+  {
+    "name": "Greedy",
+    "career_url": "https://www.greedy.com"
+  },
+  {
+    "name": "Law",
+    "career_url": "https://www.law.com/careers"
+  },
+  {
+    "name": "Chambersandpartners",
+    "career_url": "https://www.chambersandpartners.com"
+  },
+  {
+    "name": "Martindale",
+    "career_url": "https://www.martindale.com"
+  },
+  {
+    "name": "Lawyers",
+    "career_url": "https://www.lawyers.com"
+  },
+  {
+    "name": "Findlaw",
+    "career_url": "https://www.findlaw.com/careers"
+  },
+  {
+    "name": "Nalp",
+    "career_url": "https://www.nalp.org"
+  },
+  {
+    "name": "Lawyersseek",
+    "career_url": "https://www.lawyersseek.com"
+  },
+  {
+    "name": "Paralegalgateway",
+    "career_url": "https://www.paralegalgateway.com"
+  },
+  {
+    "name": "Legalassistanttoday",
+    "career_url": "https://www.legalassistanttoday.com"
+  },
+  {
+    "name": "Lawpracticetoday",
+    "career_url": "https://www.lawpracticetoday.org"
+  },
+  {
+    "name": "Abajournal",
+    "career_url": "https://www.abajournal.com/jobs"
+  },
+  {
+    "name": "Legalmanagement",
+    "career_url": "https://www.legalmanagement.org"
+  },
+  {
+    "name": "Complianceweek",
+    "career_url": "https://www.complianceweek.com"
+  },
+  {
+    "name": "Corporatecounsel",
+    "career_url": "https://www.corporatecounsel.com"
+  },
+  {
+    "name": "Hcareers",
+    "career_url": "https://www.hcareers.com"
+  },
+  {
+    "name": "Hospitalityonline",
+    "career_url": "https://www.hospitalityonline.com"
+  },
+  {
+    "name": "Hotelcareer",
+    "career_url": "https://www.hotelcareer.com"
+  },
+  {
+    "name": "Hotalcareer",
+    "career_url": "https://www.hotalcareer.com"
+  },
+  {
+    "name": "Caterer",
+    "career_url": "https://www.caterer.com"
+  },
+  {
+    "name": "Catererglobal",
+    "career_url": "https://www.catererglobal.com"
+  },
+  {
+    "name": "Restaurantjobs",
+    "career_url": "https://www.restaurantjobs.com"
+  },
+  {
+    "name": "Chefjobs",
+    "career_url": "https://www.chefjobs.com"
+  },
+  {
+    "name": "Poachedjobs",
+    "career_url": "https://www.poachedjobs.com"
+  },
+  {
+    "name": "Culinaryagents",
+    "career_url": "https://www.culinaryagents.com"
+  },
+  {
+    "name": "Starchefs",
+    "career_url": "https://www.starchefs.com"
+  },
+  {
+    "name": "Acfchefs",
+    "career_url": "https://www.acfchefs.org"
+  },
+  {
+    "name": "Traveljobsearch",
+    "career_url": "https://www.traveljobsearch.com"
+  },
+  {
+    "name": "Tourismjobs",
+    "career_url": "https://www.tourismjobs.com"
+  },
+  {
+    "name": "Tourismhr",
+    "career_url": "https://www.tourismhr.com"
+  },
+  {
+    "name": "Airlinejobsnetwork",
+    "career_url": "https://www.airlinejobsnetwork.com"
+  },
+  {
+    "name": "Avjobs",
+    "career_url": "https://www.avjobs.com"
+  },
+  {
+    "name": "Aviationjobsearch",
+    "career_url": "https://www.aviationjobsearch.com"
+  },
+  {
+    "name": "Catererjobs",
+    "career_url": "https://www.catererjobs.com"
+  },
+  {
+    "name": "Leisurejobs",
+    "career_url": "https://www.leisurejobs.com"
+  },
+  {
+    "name": "Retailchoice",
+    "career_url": "https://www.retailchoice.com"
+  },
+  {
+    "name": "Retailjobs",
+    "career_url": "https://www.retailjobs.com"
+  },
+  {
+    "name": "Fashionjobs",
+    "career_url": "https://www.fashionjobs.com"
+  },
+  {
+    "name": "Fashionworkingjobs",
+    "career_url": "https://www.fashionworkingjobs.com"
+  },
+  {
+    "name": "Stylecareers",
+    "career_url": "https://www.stylecareers.com"
+  },
+  {
+    "name": "Thefashionspot",
+    "career_url": "https://www.thefashionspot.com"
+  },
+  {
+    "name": "Fashionunited",
+    "career_url": "https://www.fashionunited.com"
+  },
+  {
+    "name": "Luxurytalentgroup",
+    "career_url": "https://www.luxurytalentgroup.com"
+  },
+  {
+    "name": "Ecommercejobs",
+    "career_url": "https://www.ecommercejobs.com"
+  },
+  {
+    "name": "Retailassociation",
+    "career_url": "https://www.retailassociation.org"
+  },
+  {
+    "name": "Usajobs",
+    "career_url": "https://www.usajobs.gov"
+  },
+  {
+    "name": "Governmentjobs",
+    "career_url": "https://www.governmentjobs.com"
+  },
+  {
+    "name": "Publicsectorjobs",
+    "career_url": "https://www.publicsectorjobs.com"
+  },
+  {
+    "name": "Govloop",
+    "career_url": "https://www.govloop.com"
+  },
+  {
+    "name": "Statelocalgov",
+    "career_url": "https://www.statelocalgov.net"
+  },
+  {
+    "name": "Statejobs",
+    "career_url": "https://www.statejobs.com"
+  },
+  {
+    "name": "Policejobs",
+    "career_url": "https://www.policejobs.com"
+  },
+  {
+    "name": "Firecareer",
+    "career_url": "https://www.firecareer.com"
+  },
+  {
+    "name": "Firefighterjobs",
+    "career_url": "https://www.firefighterjobs.com"
+  },
+  {
+    "name": "Militaryjobs",
+    "career_url": "https://www.militaryjobs.com"
+  },
+  {
+    "name": "Military",
+    "career_url": "https://www.military.com/veteran-jobs"
+  },
+  {
+    "name": "Hirevets",
+    "career_url": "https://www.hirevets.gov"
+  },
+  {
+    "name": "Vetjobs",
+    "career_url": "https://www.vetjobs.com"
+  },
+  {
+    "name": "I",
+    "career_url": "https://www.g.i.jobs"
+  },
+  {
+    "name": "Civilianjobs",
+    "career_url": "https://www.civilianjobs.com"
+  },
+  {
+    "name": "Defensecareers",
+    "career_url": "https://www.defensecareers.mil"
+  },
+  {
+    "name": "Intelligencecareers",
+    "career_url": "https://www.intelligencecareers.gov"
+  },
+  {
+    "name": "Fbijobs",
+    "career_url": "https://www.fbijobs.gov"
+  },
+  {
+    "name": "Cia",
+    "career_url": "https://www.cia.gov/careers"
+  },
+  {
+    "name": "Nsa",
+    "career_url": "https://www.nsa.gov/careers"
+  },
+  {
+    "name": "Dhs",
+    "career_url": "https://www.dhs.gov/careers"
+  },
+  {
+    "name": "Tsa",
+    "career_url": "https://www.tsa.gov/careers"
+  },
+  {
+    "name": "Cbp",
+    "career_url": "https://www.cbp.gov/careers"
+  },
+  {
+    "name": "Secretservice",
+    "career_url": "https://www.secretservice.gov/careers"
+  },
+  {
+    "name": "Atf",
+    "career_url": "https://www.atf.gov/careers"
+  },
+  {
+    "name": "Dea",
+    "career_url": "https://www.dea.gov/careers"
+  },
+  {
+    "name": "Marshals",
+    "career_url": "https://www.marshals.gov/careers"
+  },
+  {
+    "name": "Bop",
+    "career_url": "https://www.bop.gov/jobs"
+  },
+  {
+    "name": "Usbr",
+    "career_url": "https://www.usbr.gov/careers"
+  },
+  {
+    "name": "Usgs",
+    "career_url": "https://www.usgs.gov/careers"
+  },
+  {
+    "name": "Noaa",
+    "career_url": "https://www.noaa.gov/careers"
+  },
+  {
+    "name": "Nasa",
+    "career_url": "https://www.nasa.gov/careers"
+  },
+  {
+    "name": "State",
+    "career_url": "https://www.state.gov/careers"
+  },
+  {
+    "name": "Peacecorps",
+    "career_url": "https://www.peacecorps.gov"
+  },
+  {
+    "name": "Epa",
+    "career_url": "https://www.epa.gov/careers"
+  },
+  {
+    "name": "Fda",
+    "career_url": "https://www.fda.gov/careers"
+  },
+  {
+    "name": "Cdc",
+    "career_url": "https://www.cdc.gov/careers"
+  },
+  {
+    "name": "Nih",
+    "career_url": "https://www.nih.gov/careers"
+  },
+  {
+    "name": "Hhs",
+    "career_url": "https://www.hhs.gov/careers"
+  },
+  {
+    "name": "Va",
+    "career_url": "https://www.va.gov/jobs"
+  },
+  {
+    "name": "Un",
+    "career_url": "https://www.un.org/careers"
+  },
+  {
+    "name": "Unicef",
+    "career_url": "https://www.unicef.org/careers"
+  },
+  {
+    "name": "Who",
+    "career_url": "https://www.who.int/careers"
+  },
+  {
+    "name": "Undp",
+    "career_url": "https://www.undp.org/careers"
+  },
+  {
+    "name": "Worldbank",
+    "career_url": "https://www.worldbank.org/careers"
+  },
+  {
+    "name": "Imf",
+    "career_url": "https://www.imf.org/careers"
+  },
+  {
+    "name": "Redcross",
+    "career_url": "https://www.redcross.org/careers"
+  },
+  {
+    "name": "Devex",
+    "career_url": "https://www.devex.com/jobs"
+  },
+  {
+    "name": "Idealist",
+    "career_url": "https://www.idealist.org"
+  },
+  {
+    "name": "Globalgiving",
+    "career_url": "https://www.globalgiving.org/careers"
+  },
+  {
+    "name": "Nonprofitjobs",
+    "career_url": "https://www.nonprofitjobs.org"
+  },
+  {
+    "name": "Opportunityknocks",
+    "career_url": "https://www.opportunityknocks.org"
+  },
+  {
+    "name": "Philanthropy",
+    "career_url": "https://www.philanthropy.com/jobs"
+  },
+  {
+    "name": "Chronicle",
+    "career_url": "https://www.chronicle.com/nonprofit"
+  },
+  {
+    "name": "Bridgespan",
+    "career_url": "https://www.bridgespan.org/careers"
+  },
+  {
+    "name": "Foundationcenter",
+    "career_url": "https://www.foundationcenter.org/jobs"
+  },
+  {
+    "name": "Councilofnonprofits",
+    "career_url": "https://www.councilofnonprofits.org"
+  },
+  {
+    "name": "Networkforgood",
+    "career_url": "https://www.networkforgood.org"
+  },
+  {
+    "name": "Volunteermatch",
+    "career_url": "https://www.volunteermatch.org"
+  },
+  {
+    "name": "Catchafire",
+    "career_url": "https://www.catchafire.org"
+  },
+  {
+    "name": "Socialworkers",
+    "career_url": "https://www.socialworkers.org"
+  },
+  {
+    "name": "Socialworker",
+    "career_url": "https://www.socialworker.com"
+  },
+  {
+    "name": "Socialwork",
+    "career_url": "https://www.socialwork.com"
+  },
+  {
+    "name": "Communityworkers",
+    "career_url": "https://www.communityworkers.org"
+  },
+  {
+    "name": "Nonprofithr",
+    "career_url": "https://www.nonprofithr.com"
+  },
+  {
+    "name": "Nten",
+    "career_url": "https://www.nten.org/jobs"
+  },
+  {
+    "name": "Techsoup",
+    "career_url": "https://www.techsoup.org/careers"
+  },
+  {
+    "name": "Idealists",
+    "career_url": "https://www.idealists.com"
+  },
+  {
+    "name": "Environmentaljobsearch",
+    "career_url": "https://www.environmentaljobsearch.com"
+  },
+  {
+    "name": "Greenjobs",
+    "career_url": "https://www.greenjobs.com"
+  },
+  {
+    "name": "Sustainablebusiness",
+    "career_url": "https://www.sustainablebusiness.com"
+  },
+  {
+    "name": "Conservation",
+    "career_url": "https://www.conservation.org/careers"
+  },
+  {
+    "name": "Nature",
+    "career_url": "https://www.nature.org/careers"
+  },
+  {
+    "name": "Wwf",
+    "career_url": "https://www.wwf.org/careers"
+  },
+  {
+    "name": "Sierraclub",
+    "career_url": "https://www.sierraclub.org/careers"
+  },
+  {
+    "name": "Greenpeace",
+    "career_url": "https://www.greenpeace.org/careers"
+  },
+  {
+    "name": "Earthjustice",
+    "career_url": "https://www.earthjustice.org/careers"
+  },
+  {
+    "name": "Audubon",
+    "career_url": "https://www.audubon.org/careers"
+  },
+  {
+    "name": "Oceanconservancy",
+    "career_url": "https://www.oceanconservancy.org/careers"
+  },
+  {
+    "name": "Defenders",
+    "career_url": "https://www.defenders.org/careers"
+  },
+  {
+    "name": "Ycombinator",
+    "career_url": "https://www.ycombinator.com/jobs"
+  },
+  {
+    "name": "Startups",
+    "career_url": "https://www.startups.jobs"
+  },
+  {
+    "name": "Startupers",
+    "career_url": "https://www.startupers.com"
+  },
+  {
+    "name": "Ventureloop",
+    "career_url": "https://www.ventureloop.com"
+  },
+  {
+    "name": "Startuply",
+    "career_url": "https://www.startuply.com"
+  },
+  {
+    "name": "Startupgrind",
+    "career_url": "https://www.startupgrind.com"
+  },
+  {
+    "name": "Techinasia",
+    "career_url": "https://www.techinasia.com/jobs"
+  },
+  {
+    "name": "F6s",
+    "career_url": "https://www.f6s.com"
+  },
+  {
+    "name": "Crunchboard",
+    "career_url": "https://www.crunchboard.com"
+  },
+  {
+    "name": "Builtin",
+    "career_url": "https://www.builtin.com"
+  },
+  {
+    "name": "Breakoutlist",
+    "career_url": "https://www.breakoutlist.com"
+  },
+  {
+    "name": "Seedtable",
+    "career_url": "https://www.seedtable.com"
+  },
+  {
+    "name": "Producthunt",
+    "career_url": "https://www.producthunt.com/jobs"
+  },
+  {
+    "name": "Betalist",
+    "career_url": "https://www.betalist.com"
+  },
+  {
+    "name": "Launchingnext",
+    "career_url": "https://www.launchingnext.com"
+  },
+  {
+    "name": "Erlibird",
+    "career_url": "https://www.erlibird.com"
+  },
+  {
+    "name": "Startuphire",
+    "career_url": "https://www.startuphire.com"
+  },
+  {
+    "name": "Techstars",
+    "career_url": "https://www.techstars.com/careers"
+  },
+  {
+    "name": "500",
+    "career_url": "https://www.500.co/jobs"
+  },
+  {
+    "name": "Sequoiacap",
+    "career_url": "https://www.sequoiacap.com/careers"
+  },
+  {
+    "name": "A16z",
+    "career_url": "https://www.a16z.com/careers"
+  },
+  {
+    "name": "Greylock",
+    "career_url": "https://www.greylock.com/careers"
+  },
+  {
+    "name": "Benchmarkfund",
+    "career_url": "https://www.benchmarkfund.com/careers"
+  },
+  {
+    "name": "Accel",
+    "career_url": "https://www.accel.com/careers"
+  },
+  {
+    "name": "Indexventures",
+    "career_url": "https://www.indexventures.com/careers"
+  },
+  {
+    "name": "Kleinerperkins",
+    "career_url": "https://www.kleinerperkins.com/careers"
+  },
+  {
+    "name": "Nea",
+    "career_url": "https://www.nea.com/careers"
+  },
+  {
+    "name": "Bessemer",
+    "career_url": "https://www.bessemer.com/careers"
+  },
+  {
+    "name": "Lightspeedvp",
+    "career_url": "https://www.lightspeedvp.com/careers"
+  },
+  {
+    "name": "Firstround",
+    "career_url": "https://www.firstround.com/careers"
+  },
+  {
+    "name": "Google",
+    "career_url": "https://www.google.com/careers"
+  },
+  {
+    "name": "Apple",
+    "career_url": "https://www.apple.com/careers"
+  },
+  {
+    "name": "Amazon",
+    "career_url": "https://www.amazon.jobs"
+  },
+  {
+    "name": "Meta",
+    "career_url": "https://www.meta.com/careers"
+  },
+  {
+    "name": "Netflix",
+    "career_url": "https://www.netflix.com/careers"
+  },
+  {
+    "name": "Microsoft",
+    "career_url": "https://www.microsoft.com/careers"
+  },
+  {
+    "name": "Tesla",
+    "career_url": "https://www.tesla.com/careers"
+  },
+  {
+    "name": "Spacex",
+    "career_url": "https://www.spacex.com/careers"
+  },
+  {
+    "name": "Ibm",
+    "career_url": "https://www.ibm.com/careers"
+  },
+  {
+    "name": "Adobe",
+    "career_url": "https://www.adobe.com/careers"
+  },
+  {
+    "name": "Intel",
+    "career_url": "https://www.intel.com/careers"
+  },
+  {
+    "name": "Nvidia",
+    "career_url": "https://www.nvidia.com/careers"
+  },
+  {
+    "name": "Amd",
+    "career_url": "https://www.amd.com/careers"
+  },
+  {
+    "name": "Qualcomm",
+    "career_url": "https://www.qualcomm.com/careers"
+  },
+  {
+    "name": "Dell",
+    "career_url": "https://www.dell.com/careers"
+  },
+  {
+    "name": "Hp",
+    "career_url": "https://www.hp.com/careers"
+  },
+  {
+    "name": "Hpe",
+    "career_url": "https://www.hpe.com/careers"
+  },
+  {
+    "name": "Vmware",
+    "career_url": "https://www.vmware.com/careers"
+  },
+  {
+    "name": "Broadcom",
+    "career_url": "https://www.broadcom.com/careers"
+  },
+  {
+    "name": "Micron",
+    "career_url": "https://www.micron.com/careers"
+  },
+  {
+    "name": "Westerndigital",
+    "career_url": "https://www.westerndigital.com/careers"
+  },
+  {
+    "name": "Seagate",
+    "career_url": "https://www.seagate.com/careers"
+  },
+  {
+    "name": "Netapp",
+    "career_url": "https://www.netapp.com/careers"
+  },
+  {
+    "name": "Purestorage",
+    "career_url": "https://www.purestorage.com/careers"
+  },
+  {
+    "name": "Nutanix",
+    "career_url": "https://www.nutanix.com/careers"
+  },
+  {
+    "name": "Redhat",
+    "career_url": "https://www.redhat.com/careers"
+  },
+  {
+    "name": "Suse",
+    "career_url": "https://www.suse.com/careers"
+  },
+  {
+    "name": "Amazon",
+    "career_url": "https://www.aws.amazon.com/careers"
+  },
+  {
+    "name": "Microsoft",
+    "career_url": "https://www.azure.microsoft.com/careers"
+  },
+  {
+    "name": "Google",
+    "career_url": "https://www.cloud.google.com/careers"
+  },
+  {
+    "name": "Digitalocean",
+    "career_url": "https://www.digitalocean.com/careers"
+  },
+  {
+    "name": "Linode",
+    "career_url": "https://www.linode.com/careers"
+  },
+  {
+    "name": "Vultr",
+    "career_url": "https://www.vultr.com/careers"
+  },
+  {
+    "name": "Cloudflare",
+    "career_url": "https://www.cloudflare.com/careers"
+  },
+  {
+    "name": "Fastly",
+    "career_url": "https://www.fastly.com/careers"
+  },
+  {
+    "name": "Akamai",
+    "career_url": "https://www.akamai.com/careers"
+  },
+  {
+    "name": "Mongodb",
+    "career_url": "https://www.mongodb.com/careers"
+  },
+  {
+    "name": "Elastic",
+    "career_url": "https://www.elastic.co/careers"
+  },
+  {
+    "name": "Redis",
+    "career_url": "https://www.redis.com/careers"
+  },
+  {
+    "name": "Confluent",
+    "career_url": "https://www.confluent.io/careers"
+  },
+  {
+    "name": "Databricks",
+    "career_url": "https://www.databricks.com/careers"
+  },
+  {
+    "name": "Snowflake",
+    "career_url": "https://www.snowflake.com/careers"
+  },
+  {
+    "name": "Splunk",
+    "career_url": "https://www.splunk.com/careers"
+  },
+  {
+    "name": "Tableau",
+    "career_url": "https://www.tableau.com/careers"
+  },
+  {
+    "name": "Looker",
+    "career_url": "https://www.looker.com/careers"
+  },
+  {
+    "name": "Datadog",
+    "career_url": "https://www.datadog.com/careers"
+  },
+  {
+    "name": "Newrelic",
+    "career_url": "https://www.newrelic.com/careers"
+  },
+  {
+    "name": "Pagerduty",
+    "career_url": "https://www.pagerduty.com/careers"
+  },
+  {
+    "name": "Zendesk",
+    "career_url": "https://www.zendesk.com/careers"
+  },
+  {
+    "name": "Freshworks",
+    "career_url": "https://www.freshworks.com/careers"
+  },
+  {
+    "name": "Zoho",
+    "career_url": "https://www.zoho.com/careers"
+  },
+  {
+    "name": "Hubspot",
+    "career_url": "https://www.hubspot.com/careers"
+  },
+  {
+    "name": "Marketo",
+    "career_url": "https://www.marketo.com/careers"
+  },
+  {
+    "name": "Mailchimp",
+    "career_url": "https://www.mailchimp.com/careers"
+  },
+  {
+    "name": "Twilio",
+    "career_url": "https://www.twilio.com/careers"
+  },
+  {
+    "name": "Jira",
+    "career_url": "https://www.jira.com/careers"
+  },
+  {
+    "name": "Slack",
+    "career_url": "https://www.slack.com/careers"
+  },
+  {
+    "name": "Asana",
+    "career_url": "https://www.asana.com/careers"
+  },
+  {
+    "name": "Notion",
+    "career_url": "https://www.notion.so/careers"
+  },
+  {
+    "name": "Dropbox",
+    "career_url": "https://www.dropbox.com/careers"
+  },
+  {
+    "name": "Box",
+    "career_url": "https://www.box.com/careers"
+  },
+  {
+    "name": "Zoom",
+    "career_url": "https://www.zoom.us/careers"
+  },
+  {
+    "name": "Webex",
+    "career_url": "https://www.webex.com/careers"
+  },
+  {
+    "name": "Gotomeeting",
+    "career_url": "https://www.gotomeeting.com/careers"
+  },
+  {
+    "name": "Microsoft",
+    "career_url": "https://www.teams.microsoft.com/careers"
+  },
+  {
+    "name": "Figma",
+    "career_url": "https://www.figma.com/careers"
+  },
+  {
+    "name": "Sketch",
+    "career_url": "https://www.sketch.com/careers"
+  },
+  {
+    "name": "Invision",
+    "career_url": "https://www.invision.com/careers"
+  },
+  {
+    "name": "Canva",
+    "career_url": "https://www.canva.com/careers"
+  },
+  {
+    "name": "Miro",
+    "career_url": "https://www.miro.com/careers"
+  },
+  {
+    "name": "Monday",
+    "career_url": "https://www.monday.com/careers"
+  },
+  {
+    "name": "Airtable",
+    "career_url": "https://www.airtable.com/careers"
+  },
+  {
+    "name": "Smartsheet",
+    "career_url": "https://www.smartsheet.com/careers"
+  },
+  {
+    "name": "Clickup",
+    "career_url": "https://www.clickup.com/careers"
+  },
+  {
+    "name": "Trello",
+    "career_url": "https://www.trello.com/careers"
+  },
+  {
+    "name": "Basecamp",
+    "career_url": "https://www.basecamp.com/careers"
+  },
+  {
+    "name": "Github",
+    "career_url": "https://www.github.com/careers"
+  },
+  {
+    "name": "Gitlab",
+    "career_url": "https://www.gitlab.com/careers"
+  },
+  {
+    "name": "Bitbucket",
+    "career_url": "https://www.bitbucket.org/careers"
+  },
+  {
+    "name": "Jenkins",
+    "career_url": "https://www.jenkins.io/careers"
+  },
+  {
+    "name": "Docker",
+    "career_url": "https://www.docker.com/careers"
+  },
+  {
+    "name": "Kubernetes",
+    "career_url": "https://www.kubernetes.io/careers"
+  },
+  {
+    "name": "Hashicorp",
+    "career_url": "https://www.hashicorp.com/careers"
+  },
+  {
+    "name": "Etsy",
+    "career_url": "https://www.etsy.com/careers"
+  },
+  {
+    "name": "Ebay",
+    "career_url": "https://www.ebay.com/careers"
+  },
+  {
+    "name": "Walmart",
+    "career_url": "https://www.walmart.com/careers"
+  },
+  {
+    "name": "Target",
+    "career_url": "https://www.target.com/careers"
+  },
+  {
+    "name": "Alibaba",
+    "career_url": "https://www.alibaba.com/careers"
+  },
+  {
+    "name": "Flipkart",
+    "career_url": "https://www.flipkart.com/careers"
+  },
+  {
+    "name": "Myntra",
+    "career_url": "https://www.myntra.com/careers"
+  },
+  {
+    "name": "Snapdeal",
+    "career_url": "https://www.snapdeal.com/careers"
+  },
+  {
+    "name": "Paytm",
+    "career_url": "https://www.paytm.com/careers"
+  },
+  {
+    "name": "Phonepe",
+    "career_url": "https://www.phonepe.com/careers"
+  },
+  {
+    "name": "Googlepay",
+    "career_url": "https://www.googlepay.com/careers"
+  },
+  {
+    "name": "Razorpay",
+    "career_url": "https://www.razorpay.com/careers"
+  },
+  {
+    "name": "Stripe",
+    "career_url": "https://www.stripe.com/careers"
+  },
+  {
+    "name": "Square",
+    "career_url": "https://www.square.com/careers"
+  },
+  {
+    "name": "Paypal",
+    "career_url": "https://www.paypal.com/careers"
+  },
+  {
+    "name": "Visa",
+    "career_url": "https://www.visa.com/careers"
+  },
+  {
+    "name": "Mastercard",
+    "career_url": "https://www.mastercard.com/careers"
+  },
+  {
+    "name": "Americanexpress",
+    "career_url": "https://www.americanexpress.com/careers"
+  },
+  {
+    "name": "Discover",
+    "career_url": "https://www.discover.com/careers"
+  },
+  {
+    "name": "Uber",
+    "career_url": "https://www.uber.com/careers"
+  },
+  {
+    "name": "Doordash",
+    "career_url": "https://www.doordash.com/careers"
+  },
+  {
+    "name": "Grubhub",
+    "career_url": "https://www.grubhub.com/careers"
+  },
+  {
+    "name": "Ubereats",
+    "career_url": "https://www.ubereats.com/careers"
+  },
+  {
+    "name": "Instacart",
+    "career_url": "https://www.instacart.com/careers"
+  },
+  {
+    "name": "Postmates",
+    "career_url": "https://www.postmates.com/careers"
+  },
+  {
+    "name": "Deliveroo",
+    "career_url": "https://www.deliveroo.com/careers"
+  },
+  {
+    "name": "Zomato",
+    "career_url": "https://www.zomato.com/careers"
+  },
+  {
+    "name": "Swiggy",
+    "career_url": "https://www.swiggy.com/careers"
+  },
+  {
+    "name": "Ola",
+    "career_url": "https://www.ola.com/careers"
+  },
+  {
+    "name": "Rapido",
+    "career_url": "https://www.rapido.com/careers"
+  },
+  {
+    "name": "Dunzo",
+    "career_url": "https://www.dunzo.com/careers"
+  },
+  {
+    "name": "Blinkit",
+    "career_url": "https://www.blinkit.com/careers"
+  },
+  {
+    "name": "Bigbasket",
+    "career_url": "https://www.bigbasket.com/careers"
+  },
+  {
+    "name": "Airbnb",
+    "career_url": "https://www.airbnb.com/careers"
+  },
+  {
+    "name": "Booking",
+    "career_url": "https://www.booking.com/careers"
+  },
+  {
+    "name": "Expedia",
+    "career_url": "https://www.expedia.com/careers"
+  },
+  {
+    "name": "Tripadvisor",
+    "career_url": "https://www.tripadvisor.com/careers"
+  },
+  {
+    "name": "Makemytrip",
+    "career_url": "https://www.makemytrip.com/careers"
+  },
+  {
+    "name": "Goibibo",
+    "career_url": "https://www.goibibo.com/careers"
+  },
+  {
+    "name": "Cleartrip",
+    "career_url": "https://www.cleartrip.com/careers"
+  },
+  {
+    "name": "Yatra",
+    "career_url": "https://www.yatra.com/careers"
+  },
+  {
+    "name": "Oyo",
+    "career_url": "https://www.oyo.com/careers"
+  },
+  {
+    "name": "Marriott",
+    "career_url": "https://www.marriott.com/careers"
+  },
+  {
+    "name": "Hilton",
+    "career_url": "https://www.hilton.com/careers"
+  },
+  {
+    "name": "Ihg",
+    "career_url": "https://www.ihg.com/careers"
+  },
+  {
+    "name": "Hyatt",
+    "career_url": "https://www.hyatt.com/careers"
+  },
+  {
+    "name": "Accor",
+    "career_url": "https://www.accor.com/careers"
+  },
+  {
+    "name": "Radissonhotels",
+    "career_url": "https://www.radissonhotels.com/careers"
+  },
+  {
+    "name": "Twitter",
+    "career_url": "https://www.twitter.com/careers"
+  },
+  {
+    "name": "Linkedin",
+    "career_url": "https://www.linkedin.com/careers"
+  },
+  {
+    "name": "Snapchat",
+    "career_url": "https://www.snapchat.com/careers"
+  },
+  {
+    "name": "Tiktok",
+    "career_url": "https://www.tiktok.com/careers"
+  },
+  {
+    "name": "Pinterest",
+    "career_url": "https://www.pinterest.com/careers"
+  },
+  {
+    "name": "Reddit",
+    "career_url": "https://www.reddit.com/careers"
+  },
+  {
+    "name": "Discord",
+    "career_url": "https://www.discord.com/careers"
+  },
+  {
+    "name": "Telegram",
+    "career_url": "https://www.telegram.org/careers"
+  },
+  {
+    "name": "Whatsapp",
+    "career_url": "https://www.whatsapp.com/careers"
+  },
+  {
+    "name": "Signal",
+    "career_url": "https://www.signal.org/careers"
+  },
+  {
+    "name": "Wechat",
+    "career_url": "https://www.wechat.com/careers"
+  },
+  {
+    "name": "Line",
+    "career_url": "https://www.line.me/careers"
+  },
+  {
+    "name": "Viber",
+    "career_url": "https://www.viber.com/careers"
+  },
+  {
+    "name": "Skype",
+    "career_url": "https://www.skype.com/careers"
+  },
+  {
+    "name": "Clubhouse",
+    "career_url": "https://www.clubhouse.com/careers"
+  },
+  {
+    "name": "Mastodon",
+    "career_url": "https://www.mastodon.social/careers"
+  },
+  {
+    "name": "Tumblr",
+    "career_url": "https://www.tumblr.com/careers"
+  },
+  {
+    "name": "Quora",
+    "career_url": "https://www.quora.com/careers"
+  },
+  {
+    "name": "Medium",
+    "career_url": "https://www.medium.com/careers"
+  },
+  {
+    "name": "Substack",
+    "career_url": "https://www.substack.com/careers"
+  },
+  {
+    "name": "Ea",
+    "career_url": "https://www.ea.com/careers"
+  },
+  {
+    "name": "Activision",
+    "career_url": "https://www.activision.com/careers"
+  },
+  {
+    "name": "Ubisoft",
+    "career_url": "https://www.ubisoft.com/careers"
+  },
+  {
+    "name": "Blizzard",
+    "career_url": "https://www.blizzard.com/careers"
+  },
+  {
+    "name": "Rockstargames",
+    "career_url": "https://www.rockstargames.com/careers"
+  },
+  {
+    "name": "Epicgames",
+    "career_url": "https://www.epicgames.com/careers"
+  },
+  {
+    "name": "Riotgames",
+    "career_url": "https://www.riotgames.com/careers"
+  },
+  {
+    "name": "Valvesoftware",
+    "career_url": "https://www.valvesoftware.com/careers"
+  },
+  {
+    "name": "Bethesda",
+    "career_url": "https://www.bethesda.net/careers"
+  },
+  {
+    "name": "Nintendo",
+    "career_url": "https://www.nintendo.com/careers"
+  },
+  {
+    "name": "Sony",
+    "career_url": "https://www.sony.com/careers"
+  },
+  {
+    "name": "Playstation",
+    "career_url": "https://www.playstation.com/careers"
+  },
+  {
+    "name": "Xbox",
+    "career_url": "https://www.xbox.com/careers"
+  },
+  {
+    "name": "Twitch",
+    "career_url": "https://www.twitch.tv/careers"
+  },
+  {
+    "name": "Youtube",
+    "career_url": "https://www.youtube.com/careers"
+  },
+  {
+    "name": "Spotify",
+    "career_url": "https://www.spotify.com/careers"
+  },
+  {
+    "name": "Soundcloud",
+    "career_url": "https://www.soundcloud.com/careers"
+  },
+  {
+    "name": "Deezer",
+    "career_url": "https://www.deezer.com/careers"
+  },
+  {
+    "name": "Tidal",
+    "career_url": "https://www.tidal.com/careers"
+  },
+  {
+    "name": "Pandora",
+    "career_url": "https://www.pandora.com/careers"
+  },
+  {
+    "name": "Tcs",
+    "career_url": "https://www.tcs.com/careers"
+  },
+  {
+    "name": "Infosys",
+    "career_url": "https://www.infosys.com/careers"
+  },
+  {
+    "name": "Wipro",
+    "career_url": "https://www.wipro.com/careers"
+  },
+  {
+    "name": "Hcltech",
+    "career_url": "https://www.hcltech.com/careers"
+  },
+  {
+    "name": "Techm",
+    "career_url": "https://www.techm.com/careers"
+  },
+  {
+    "name": "Lntinfotech",
+    "career_url": "https://www.lntinfotech.com/careers"
+  },
+  {
+    "name": "Mindtree",
+    "career_url": "https://www.mindtree.com/careers"
+  },
+  {
+    "name": "Mphasis",
+    "career_url": "https://www.mphasis.com/careers"
+  },
+  {
+    "name": "Cyient",
+    "career_url": "https://www.cyient.com/careers"
+  },
+  {
+    "name": "Zensar",
+    "career_url": "https://www.zensar.com/careers"
+  },
+  {
+    "name": "Persistent",
+    "career_url": "https://www.persistent.com/careers"
+  },
+  {
+    "name": "Ltimindtree",
+    "career_url": "https://www.ltimindtree.com/careers"
+  },
+  {
+    "name": "Coforge",
+    "career_url": "https://www.coforge.com/careers"
+  },
+  {
+    "name": "Birlasoft",
+    "career_url": "https://www.birlasoft.com/careers"
+  },
+  {
+    "name": "Mastek",
+    "career_url": "https://www.mastek.com/careers"
+  },
+  {
+    "name": "Hexaware",
+    "career_url": "https://www.hexaware.com/careers"
+  },
+  {
+    "name": "Igate",
+    "career_url": "https://www.igate.com/careers"
+  },
+  {
+    "name": "Polaris",
+    "career_url": "https://www.polaris.com/careers"
+  },
+  {
+    "name": "Sonata-software",
+    "career_url": "https://www.sonata-software.com/careers"
+  },
+  {
+    "name": "3i-infotech",
+    "career_url": "https://www.3i-infotech.com/careers"
+  },
+  {
+    "name": "Accenture",
+    "career_url": "https://www.accenture.com/in-en/careers"
+  },
+  {
+    "name": "Deloitte",
+    "career_url": "https://www.deloitte.com/in/en/careers"
+  },
+  {
+    "name": "Ey",
+    "career_url": "https://www.ey.com/en_in/careers"
+  },
+  {
+    "name": "Pwc",
+    "career_url": "https://www.pwc.in/careers"
+  },
+  {
+    "name": "Kpmg",
+    "career_url": "https://www.kpmg.com/in/careers"
+  },
+  {
+    "name": "Capgemini",
+    "career_url": "https://www.capgemini.com/in-en/careers"
+  },
+  {
+    "name": "Cognizant",
+    "career_url": "https://www.cognizant.com/in/en/careers"
+  },
+  {
+    "name": "Dxc",
+    "career_url": "https://www.dxc.com/in/en/careers"
+  },
+  {
+    "name": "Genpact",
+    "career_url": "https://www.genpact.com/careers"
+  },
+  {
+    "name": "Wns",
+    "career_url": "https://www.wns.com/careers"
+  },
+  {
+    "name": "Tsmc",
+    "career_url": "https://www.tsmc.com/careers"
+  },
+  {
+    "name": "Samsung",
+    "career_url": "https://www.samsung.com/careers"
+  },
+  {
+    "name": "Sk-hynix",
+    "career_url": "https://www.sk-hynix.com/careers"
+  },
+  {
+    "name": "Arm",
+    "career_url": "https://www.arm.com/careers"
+  },
+  {
+    "name": "Synopsys",
+    "career_url": "https://www.synopsys.com/careers"
+  },
+  {
+    "name": "Cadence",
+    "career_url": "https://www.cadence.com/careers"
+  },
+  {
+    "name": "Ansys",
+    "career_url": "https://www.ansys.com/careers"
+  },
+  {
+    "name": "Ti",
+    "career_url": "https://www.ti.com/careers"
+  },
+  {
+    "name": "Analog",
+    "career_url": "https://www.analog.com/careers"
+  },
+  {
+    "name": "Nxp",
+    "career_url": "https://www.nxp.com/careers"
+  },
+  {
+    "name": "Infineon",
+    "career_url": "https://www.infineon.com/careers"
+  },
+  {
+    "name": "Stmicroelectronics",
+    "career_url": "https://www.stmicroelectronics.com/careers"
+  },
+  {
+    "name": "Renesas",
+    "career_url": "https://www.renesas.com/careers"
+  },
+  {
+    "name": "Microchip",
+    "career_url": "https://www.microchip.com/careers"
+  },
+  {
+    "name": "Maxim",
+    "career_url": "https://www.maxim.com/careers"
+  },
+  {
+    "name": "Onsemi",
+    "career_url": "https://www.onsemi.com/careers"
+  },
+  {
+    "name": "Skyworks",
+    "career_url": "https://www.skyworks.com/careers"
+  },
+  {
+    "name": "Qorvo",
+    "career_url": "https://www.qorvo.com/careers"
+  },
+  {
+    "name": "Marvell",
+    "career_url": "https://www.marvell.com/careers"
+  },
+  {
+    "name": "Verizon",
+    "career_url": "https://www.verizon.com/careers"
+  },
+  {
+    "name": "Att",
+    "career_url": "https://www.att.com/careers"
+  },
+  {
+    "name": "Tmobile",
+    "career_url": "https://www.tmobile.com/careers"
+  },
+  {
+    "name": "Sprint",
+    "career_url": "https://www.sprint.com/careers"
+  },
+  {
+    "name": "Vodafone",
+    "career_url": "https://www.vodafone.com/careers"
+  },
+  {
+    "name": "Orange",
+    "career_url": "https://www.orange.com/careers"
+  },
+  {
+    "name": "Telefonica",
+    "career_url": "https://www.telefonica.com/careers"
+  },
+  {
+    "name": "Deutschetelekom",
+    "career_url": "https://www.deutschetelekom.com/careers"
+  },
+  {
+    "name": "Bt",
+    "career_url": "https://www.bt.com/careers"
+  },
+  {
+    "name": "Airtel",
+    "career_url": "https://www.airtel.in/careers"
+  },
+  {
+    "name": "Jio",
+    "career_url": "https://www.jio.com/careers"
+  },
+  {
+    "name": "Vi",
+    "career_url": "https://www.vi.in/careers"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.bsnl.co.in/careers"
+  },
+  {
+    "name": "Nokia",
+    "career_url": "https://www.nokia.com/careers"
+  },
+  {
+    "name": "Ericsson",
+    "career_url": "https://www.ericsson.com/careers"
+  },
+  {
+    "name": "Huawei",
+    "career_url": "https://www.huawei.com/careers"
+  },
+  {
+    "name": "Zte",
+    "career_url": "https://www.zte.com/careers"
+  },
+  {
+    "name": "Juniper",
+    "career_url": "https://www.juniper.net/careers"
+  },
+  {
+    "name": "Arista",
+    "career_url": "https://www.arista.com/careers"
+  },
+  {
+    "name": "Extreme",
+    "career_url": "https://www.extreme.com/careers"
+  },
+  {
+    "name": "Paloaltonetworks",
+    "career_url": "https://www.paloaltonetworks.com/careers"
+  },
+  {
+    "name": "Fortinet",
+    "career_url": "https://www.fortinet.com/careers"
+  },
+  {
+    "name": "Checkpoint",
+    "career_url": "https://www.checkpoint.com/careers"
+  },
+  {
+    "name": "Crowdstrike",
+    "career_url": "https://www.crowdstrike.com/careers"
+  },
+  {
+    "name": "Zscaler",
+    "career_url": "https://www.zscaler.com/careers"
+  },
+  {
+    "name": "Okta",
+    "career_url": "https://www.okta.com/careers"
+  },
+  {
+    "name": "Proofpoint",
+    "career_url": "https://www.proofpoint.com/careers"
+  },
+  {
+    "name": "Fireeye",
+    "career_url": "https://www.fireeye.com/careers"
+  },
+  {
+    "name": "Mcafee",
+    "career_url": "https://www.mcafee.com/careers"
+  },
+  {
+    "name": "Symantec",
+    "career_url": "https://www.symantec.com/careers"
+  },
+  {
+    "name": "Trendmicro",
+    "career_url": "https://www.trendmicro.com/careers"
+  },
+  {
+    "name": "Kaspersky",
+    "career_url": "https://www.kaspersky.com/careers"
+  },
+  {
+    "name": "Sophos",
+    "career_url": "https://www.sophos.com/careers"
+  },
+  {
+    "name": "Carbonblack",
+    "career_url": "https://www.carbonblack.com/careers"
+  },
+  {
+    "name": "Qualys",
+    "career_url": "https://www.qualys.com/careers"
+  },
+  {
+    "name": "Rapid7",
+    "career_url": "https://www.rapid7.com/careers"
+  },
+  {
+    "name": "Tenable",
+    "career_url": "https://www.tenable.com/careers"
+  },
+  {
+    "name": "Imperva",
+    "career_url": "https://www.imperva.com/careers"
+  },
+  {
+    "name": "F5",
+    "career_url": "https://www.f5.com/careers"
+  },
+  {
+    "name": "Barracuda",
+    "career_url": "https://www.barracuda.com/careers"
+  },
+  {
+    "name": "Robinhood",
+    "career_url": "https://www.robinhood.com/careers"
+  },
+  {
+    "name": "Binance",
+    "career_url": "https://www.binance.com/careers"
+  },
+  {
+    "name": "Kraken",
+    "career_url": "https://www.kraken.com/careers"
+  },
+  {
+    "name": "Gemini",
+    "career_url": "https://www.gemini.com/careers"
+  },
+  {
+    "name": "Plaid",
+    "career_url": "https://www.plaid.com/careers"
+  },
+  {
+    "name": "Chime",
+    "career_url": "https://www.chime.com/careers"
+  },
+  {
+    "name": "Affirm",
+    "career_url": "https://www.affirm.com/careers"
+  },
+  {
+    "name": "Klarna",
+    "career_url": "https://www.klarna.com/careers"
+  },
+  {
+    "name": "Revolut",
+    "career_url": "https://www.revolut.com/careers"
+  },
+  {
+    "name": "N26",
+    "career_url": "https://www.n26.com/careers"
+  },
+  {
+    "name": "Nubank",
+    "career_url": "https://www.nubank.com/careers"
+  },
+  {
+    "name": "Monzo",
+    "career_url": "https://www.monzo.com/careers"
+  },
+  {
+    "name": "Transferwise",
+    "career_url": "https://www.transferwise.com/careers"
+  },
+  {
+    "name": "Adyen",
+    "career_url": "https://www.adyen.com/careers"
+  },
+  {
+    "name": "Braintree",
+    "career_url": "https://www.braintree.com/careers"
+  },
+  {
+    "name": "Wealthfront",
+    "career_url": "https://www.wealthfront.com/careers"
+  },
+  {
+    "name": "Betterment",
+    "career_url": "https://www.betterment.com/careers"
+  },
+  {
+    "name": "Sofi",
+    "career_url": "https://www.sofi.com/careers"
+  },
+  {
+    "name": "Mumbaijobs",
+    "career_url": "https://www.mumbaijobs.com"
+  },
+  {
+    "name": "Delhijobs",
+    "career_url": "https://www.delhijobs.com"
+  },
+  {
+    "name": "Bangalorejobs",
+    "career_url": "https://www.bangalorejobs.com"
+  },
+  {
+    "name": "Hyderabadjobs",
+    "career_url": "https://www.hyderabadjobs.com"
+  },
+  {
+    "name": "Punejobs",
+    "career_url": "https://www.punejobs.com"
+  },
+  {
+    "name": "Chennaijobs",
+    "career_url": "https://www.chennaijobs.com"
+  },
+  {
+    "name": "Kolkatajobs",
+    "career_url": "https://www.kolkatajobs.com"
+  },
+  {
+    "name": "Ahmedabadjobs",
+    "career_url": "https://www.ahmedabadjobs.com"
+  },
+  {
+    "name": "Suratjobs",
+    "career_url": "https://www.suratjobs.com"
+  },
+  {
+    "name": "Jaipurjobs",
+    "career_url": "https://www.jaipurjobs.com"
+  },
+  {
+    "name": "Lucknowjobs",
+    "career_url": "https://www.lucknowjobs.com"
+  },
+  {
+    "name": "Kanpurjobs",
+    "career_url": "https://www.kanpurjobs.com"
+  },
+  {
+    "name": "Nagpurjobs",
+    "career_url": "https://www.nagpurjobs.com"
+  },
+  {
+    "name": "Indorejobs",
+    "career_url": "https://www.indorejobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.bhopal.jobs.com"
+  },
+  {
+    "name": "Visakhapatnamjobs",
+    "career_url": "https://www.visakhapatnamjobs.com"
+  },
+  {
+    "name": "Coimbatorejobs",
+    "career_url": "https://www.coimbatorejobs.com"
+  },
+  {
+    "name": "Kochijobs",
+    "career_url": "https://www.kochijobs.com"
+  },
+  {
+    "name": "Thiruvananthapuramjobs",
+    "career_url": "https://www.thiruvananthapuramjobs.com"
+  },
+  {
+    "name": "Bhubaneswarjobs",
+    "career_url": "https://www.bhubaneswarjobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.patna.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.ranchi.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.guwahati.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.chandigarh.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.dehradun.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.shimla.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.goa.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.mysore.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.mangalore.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.hubli.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.vadodara.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.rajkot.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.nashik.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.aurangabad.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.amritsar.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.ludhiana.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.jalandhar.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.agra.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.varanasi.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.meerut.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.allahabad.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.gurgaon.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.noida.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.faridabad.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.ghaziabad.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.navi-mumbai.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.thane.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.kalyan.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.vasai.jobs.com"
+  },
+  {
+    "name": "Jobs",
+    "career_url": "https://www.panvel.jobs.com"
+  },
+  {
+    "name": "Ford",
+    "career_url": "https://www.ford.com/careers"
+  },
+  {
+    "name": "Gm",
+    "career_url": "https://www.gm.com/careers"
+  },
+  {
+    "name": "Toyota",
+    "career_url": "https://www.toyota.com/careers"
+  },
+  {
+    "name": "Honda",
+    "career_url": "https://www.honda.com/careers"
+  },
+  {
+    "name": "Bmw",
+    "career_url": "https://www.bmw.com/careers"
+  },
+  {
+    "name": "Mercedes-benz",
+    "career_url": "https://www.mercedes-benz.com/careers"
+  },
+  {
+    "name": "Audi",
+    "career_url": "https://www.audi.com/careers"
+  },
+  {
+    "name": "Volkswagen",
+    "career_url": "https://www.volkswagen.com/careers"
+  },
+  {
+    "name": "Nissan",
+    "career_url": "https://www.nissan.com/careers"
+  },
+  {
+    "name": "Hyundai",
+    "career_url": "https://www.hyundai.com/careers"
+  },
+  {
+    "name": "Kia",
+    "career_url": "https://www.kia.com/careers"
+  },
+  {
+    "name": "Mazda",
+    "career_url": "https://www.mazda.com/careers"
+  },
+  {
+    "name": "Subaru",
+    "career_url": "https://www.subaru.com/careers"
+  },
+  {
+    "name": "Porsche",
+    "career_url": "https://www.porsche.com/careers"
+  },
+  {
+    "name": "Ferrari",
+    "career_url": "https://www.ferrari.com/careers"
+  },
+  {
+    "name": "Lamborghini",
+    "career_url": "https://www.lamborghini.com/careers"
+  },
+  {
+    "name": "Rivian",
+    "career_url": "https://www.rivian.com/careers"
+  },
+  {
+    "name": "Lucidmotors",
+    "career_url": "https://www.lucidmotors.com/careers"
+  },
+  {
+    "name": "Nio",
+    "career_url": "https://www.nio.com/careers"
+  },
+  {
+    "name": "Byd",
+    "career_url": "https://www.byd.com/careers"
+  },
+  {
+    "name": "Openai",
+    "career_url": "https://www.openai.com/careers"
+  },
+  {
+    "name": "Anthropic",
+    "career_url": "https://www.anthropic.com/careers"
+  },
+  {
+    "name": "Deepmind",
+    "career_url": "https://www.deepmind.com/careers"
+  },
+  {
+    "name": "Scale",
+    "career_url": "https://www.scale.com/careers"
+  },
+  {
+    "name": "Huggingface",
+    "career_url": "https://www.huggingface.co/careers"
+  },
+  {
+    "name": "Cohere",
+    "career_url": "https://www.cohere.com/careers"
+  },
+  {
+    "name": "Stability",
+    "career_url": "https://www.stability.ai/careers"
+  },
+  {
+    "name": "Midjourney",
+    "career_url": "https://www.midjourney.com/careers"
+  },
+  {
+    "name": "Runway",
+    "career_url": "https://www.runway.ml/careers"
+  },
+  {
+    "name": "Synthesis",
+    "career_url": "https://www.synthesis.ai/careers"
+  },
+  {
+    "name": "Datarobot",
+    "career_url": "https://www.datarobot.com/careers"
+  },
+  {
+    "name": "H2o",
+    "career_url": "https://www.h2o.ai/careers"
+  },
+  {
+    "name": "C3",
+    "career_url": "https://www.c3.ai/careers"
+  },
+  {
+    "name": "Palantir",
+    "career_url": "https://www.palantir.com/careers"
+  },
+  {
+    "name": "Alteryx",
+    "career_url": "https://www.alteryx.com/careers"
+  },
+  {
+    "name": "Dataiku",
+    "career_url": "https://www.dataiku.com/careers"
+  },
+  {
+    "name": "Domino",
+    "career_url": "https://www.domino.ai/careers"
+  },
+  {
+    "name": "Clarifai",
+    "career_url": "https://www.clarifai.com/careers"
+  },
+  {
+    "name": "Sensetime",
+    "career_url": "https://www.sensetime.com/careers"
+  },
+  {
+    "name": "Megvii",
+    "career_url": "https://www.megvii.com/careers"
+  },
+  {
+    "name": "Blueorigin",
+    "career_url": "https://www.blueorigin.com/careers"
+  },
+  {
+    "name": "Rocketlab",
+    "career_url": "https://www.rocketlab.com/careers"
+  },
+  {
+    "name": "Relativityspace",
+    "career_url": "https://www.relativityspace.com/careers"
+  },
+  {
+    "name": "Planet",
+    "career_url": "https://www.planet.com/careers"
+  },
+  {
+    "name": "Spire",
+    "career_url": "https://www.spire.com/careers"
+  },
+  {
+    "name": "Axiomspace",
+    "career_url": "https://www.axiomspace.com/careers"
+  },
+  {
+    "name": "Aurora",
+    "career_url": "https://www.aurora.tech/careers"
+  },
+  {
+    "name": "Waymo",
+    "career_url": "https://www.waymo.com/careers"
+  },
+  {
+    "name": "Cruise",
+    "career_url": "https://www.cruise.com/careers"
+  },
+  {
+    "name": "Lenovo",
+    "career_url": "https://www.lenovo.com/careers"
+  },
+  {
+    "name": "Asus",
+    "career_url": "https://www.asus.com/careers"
+  },
+  {
+    "name": "Acer",
+    "career_url": "https://www.acer.com/careers"
+  },
+  {
+    "name": "Msi",
+    "career_url": "https://www.msi.com/careers"
+  },
+  {
+    "name": "Gigabyte",
+    "career_url": "https://www.gigabyte.com/careers"
+  },
+  {
+    "name": "Lg",
+    "career_url": "https://www.lg.com/careers"
+  },
+  {
+    "name": "Panasonic",
+    "career_url": "https://www.panasonic.com/careers"
+  },
+  {
+    "name": "Sharp",
+    "career_url": "https://www.sharp.com/careers"
+  },
+  {
+    "name": "Toshiba",
+    "career_url": "https://www.toshiba.com/careers"
+  },
+  {
+    "name": "Fujitsu",
+    "career_url": "https://www.fujitsu.com/careers"
+  },
+  {
+    "name": "Nec",
+    "career_url": "https://www.nec.com/careers"
+  },
+  {
+    "name": "Hitachi",
+    "career_url": "https://www.hitachi.com/careers"
+  },
+  {
+    "name": "Philips",
+    "career_url": "https://www.philips.com/careers"
+  },
+  {
+    "name": "Siemens",
+    "career_url": "https://www.siemens.com/careers"
+  },
+  {
+    "name": "Bosch",
+    "career_url": "https://www.bosch.com/careers"
+  },
+  {
+    "name": "Ge",
+    "career_url": "https://www.ge.com/careers"
+  },
+  {
+    "name": "Honeywell",
+    "career_url": "https://www.honeywell.com/careers"
+  },
+  {
+    "name": "Schneider-electric",
+    "career_url": "https://www.schneider-electric.com/careers"
+  },
+  {
+    "name": "Abb",
+    "career_url": "https://www.abb.com/careers"
+  },
+  {
+    "name": "Coursera",
+    "career_url": "https://www.coursera.org/careers"
+  },
+  {
+    "name": "Udemy",
+    "career_url": "https://www.udemy.com/careers"
+  },
+  {
+    "name": "Edx",
+    "career_url": "https://www.edx.org/careers"
+  },
+  {
+    "name": "Udacity",
+    "career_url": "https://www.udacity.com/careers"
+  },
+  {
+    "name": "Pluralsight",
+    "career_url": "https://www.pluralsight.com/careers"
+  },
+  {
+    "name": "Linkedin",
+    "career_url": "https://www.linkedin.com/learning/careers"
+  },
+  {
+    "name": "Skillshare",
+    "career_url": "https://www.skillshare.com/careers"
+  },
+  {
+    "name": "Khanacademy",
+    "career_url": "https://www.khanacademy.org/careers"
+  },
+  {
+    "name": "Duolingo",
+    "career_url": "https://www.duolingo.com/careers"
+  },
+  {
+    "name": "Byjus",
+    "career_url": "https://www.byjus.com/careers"
+  },
+  {
+    "name": "Unacademy",
+    "career_url": "https://www.unacademy.com/careers"
+  },
+  {
+    "name": "Vedantu",
+    "career_url": "https://www.vedantu.com/careers"
+  },
+  {
+    "name": "Toppr",
+    "career_url": "https://www.toppr.com/careers"
+  },
+  {
+    "name": "Whitehatjr",
+    "career_url": "https://www.whitehatjr.com/careers"
+  },
+  {
+    "name": "Simplilearn",
+    "career_url": "https://www.simplilearn.com/careers"
+  },
+  {
+    "name": "Upgrad",
+    "career_url": "https://www.upgrad.com/careers"
+  },
+  {
+    "name": "Greatlearning",
+    "career_url": "https://www.greatlearning.in/careers"
+  },
+  {
+    "name": "Scaler",
+    "career_url": "https://www.scaler.com/careers"
+  },
+  {
+    "name": "Codingninjas",
+    "career_url": "https://www.codingninjas.com/careers"
+  },
+  {
+    "name": "Pearsoned",
+    "career_url": "https://www.pearsoned.com/careers"
+  },
+  {
+    "name": "Google",
+    "career_url": "https://www.google.com/ads/careers"
+  },
+  {
+    "name": "Facebook",
+    "career_url": "https://www.facebook.com/business/careers"
+  },
+  {
+    "name": "Doubleclick",
+    "career_url": "https://www.doubleclick.com/careers"
+  },
+  {
+    "name": "Thetradedesk",
+    "career_url": "https://www.thetradedesk.com/careers"
+  },
+  {
+    "name": "Criteo",
+    "career_url": "https://www.criteo.com/careers"
+  },
+  {
+    "name": "Taboola",
+    "career_url": "https://www.taboola.com/careers"
+  },
+  {
+    "name": "Outbrain",
+    "career_url": "https://www.outbrain.com/careers"
+  },
+  {
+    "name": "Mediamath",
+    "career_url": "https://www.mediamath.com/careers"
+  },
+  {
+    "name": "Adroll",
+    "career_url": "https://www.adroll.com/careers"
+  },
+  {
+    "name": "Branch",
+    "career_url": "https://www.branch.io/careers"
+  },
+  {
+    "name": "Appsflyer",
+    "career_url": "https://www.appsflyer.com/careers"
+  },
+  {
+    "name": "Adjust",
+    "career_url": "https://www.adjust.com/careers"
+  },
+  {
+    "name": "Singular",
+    "career_url": "https://www.singular.net/careers"
+  },
+  {
+    "name": "Kochava",
+    "career_url": "https://www.kochava.com/careers"
+  },
+  {
+    "name": "Moengage",
+    "career_url": "https://www.moengage.com/careers"
+  },
+  {
+    "name": "Clevertap",
+    "career_url": "https://www.clevertap.com/careers"
+  },
+  {
+    "name": "Webengage",
+    "career_url": "https://www.webengage.com/careers"
+  },
+  {
+    "name": "Insider",
+    "career_url": "https://www.insider.com/careers"
+  },
+  {
+    "name": "Optimizely",
+    "career_url": "https://www.optimizely.com/careers"
+  },
+  {
+    "name": "Vwo",
+    "career_url": "https://www.vwo.com/careers"
+  },
+  {
+    "name": "23andme",
+    "career_url": "https://www.23andme.com/careers"
+  },
+  {
+    "name": "Illumina",
+    "career_url": "https://www.illumina.com/careers"
+  },
+  {
+    "name": "Thermofisher",
+    "career_url": "https://www.thermofisher.com/careers"
+  },
+  {
+    "name": "Abbvie",
+    "career_url": "https://www.abbvie.com/careers"
+  },
+  {
+    "name": "Gilead",
+    "career_url": "https://www.gilead.com/careers"
+  },
+  {
+    "name": "Moderna",
+    "career_url": "https://www.moderna.com/careers"
+  },
+  {
+    "name": "Regeneron",
+    "career_url": "https://www.regeneron.com/careers"
+  },
+  {
+    "name": "Amgen",
+    "career_url": "https://www.amgen.com/careers"
+  },
+  {
+    "name": "Biogen",
+    "career_url": "https://www.biogen.com/careers"
+  },
+  {
+    "name": "Genentech",
+    "career_url": "https://www.genentech.com/careers"
+  },
+  {
+    "name": "Novartis",
+    "career_url": "https://www.novartis.com/careers"
+  },
+  {
+    "name": "Roche",
+    "career_url": "https://www.roche.com/careers"
+  },
+  {
+    "name": "Pfizer",
+    "career_url": "https://www.pfizer.com/careers"
+  },
+  {
+    "name": "Merck",
+    "career_url": "https://www.merck.com/careers"
+  },
+  {
+    "name": "Jnj",
+    "career_url": "https://www.jnj.com/careers"
+  },
+  {
+    "name": "Abbottcareers",
+    "career_url": "https://www.abbottcareers.com"
+  },
+  {
+    "name": "Medtronic",
+    "career_url": "https://www.medtronic.com/careers"
+  },
+  {
+    "name": "Bostonsci",
+    "career_url": "https://www.bostonsci.com/careers"
+  },
+  {
+    "name": "Bd",
+    "career_url": "https://www.bd.com/careers"
+  },
+  {
+    "name": "Stryker",
+    "career_url": "https://www.stryker.com/careers"
+  },
+  {
+    "name": "Zillow",
+    "career_url": "https://www.zillow.com/careers"
+  },
+  {
+    "name": "Redfin",
+    "career_url": "https://www.redfin.com/careers"
+  },
+  {
+    "name": "Compass",
+    "career_url": "https://www.compass.com/careers"
+  },
+  {
+    "name": "Opendoor",
+    "career_url": "https://www.opendoor.com/careers"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.zoopla.co.uk/careers"
+  },
+  {
+    "name": "Co",
+    "career_url": "https://www.rightmove.co.uk/careers"
+  },
+  {
+    "name": "Realtor",
+    "career_url": "https://www.realtor.com/careers"
+  },
+  {
+    "name": "Trulia",
+    "career_url": "https://www.trulia.com/careers"
+  },
+  {
+    "name": "Apartments",
+    "career_url": "https://www.apartments.com/careers"
+  },
+  {
+    "name": "Housing",
+    "career_url": "https://www.housing.com/careers"
+  },
+  {
+    "name": "99acres",
+    "career_url": "https://www.99acres.com/careers"
+  },
+  {
+    "name": "Magicbricks",
+    "career_url": "https://www.magicbricks.com/careers"
+  },
+  {
+    "name": "Commonfloor",
+    "career_url": "https://www.commonfloor.com/careers"
+  },
+  {
+    "name": "Nestaway",
+    "career_url": "https://www.nestaway.com/careers"
+  },
+  {
+    "name": "Nobroker",
+    "career_url": "https://www.nobroker.in/careers"
+  },
+  {
+    "name": "Legalzoom",
+    "career_url": "https://www.legalzoom.com/careers"
+  },
+  {
+    "name": "Rocketlawyer",
+    "career_url": "https://www.rocketlawyer.com/careers"
+  },
+  {
+    "name": "Clio",
+    "career_url": "https://www.clio.com/careers"
+  },
+  {
+    "name": "Ironclad",
+    "career_url": "https://www.ironclad.ai/careers"
+  },
+  {
+    "name": "Contractworks",
+    "career_url": "https://www.contractworks.com/careers"
+  },
+  {
+    "name": "Lawtrades",
+    "career_url": "https://www.lawtrades.com/careers"
+  },
+  {
+    "name": "Upsolve",
+    "career_url": "https://www.upsolve.org/careers"
+  },
+  {
+    "name": "Openlaw",
+    "career_url": "https://www.openlaw.io/careers"
+  },
+  {
+    "name": "Everlaw",
+    "career_url": "https://www.everlaw.com/careers"
+  },
+  {
+    "name": "Relativity",
+    "career_url": "https://www.relativity.com/careers"
+  },
+  {
+    "name": "Impossible",
+    "career_url": "https://www.impossible.com/careers"
+  },
+  {
+    "name": "Beyondmeat",
+    "career_url": "https://www.beyondmeat.com/careers"
+  },
+  {
+    "name": "Jbs",
+    "career_url": "https://www.jbs.com/careers"
+  },
+  {
+    "name": "Cargill",
+    "career_url": "https://www.cargill.com/careers"
+  },
+  {
+    "name": "Adm",
+    "career_url": "https://www.adm.com/careers"
+  },
+  {
+    "name": "Bunge",
+    "career_url": "https://www.bunge.com/careers"
+  },
+  {
+    "name": "Monsanto",
+    "career_url": "https://www.monsanto.com/careers"
+  },
+  {
+    "name": "Syngenta",
+    "career_url": "https://www.syngenta.com/careers"
+  },
+  {
+    "name": "Corteva",
+    "career_url": "https://www.corteva.com/careers"
+  },
+  {
+    "name": "Deere",
+    "career_url": "https://www.deere.com/careers"
+  },
+  {
+    "name": "Agco",
+    "career_url": "https://www.agco.com/careers"
+  },
+  {
+    "name": "Cnhind",
+    "career_url": "https://www.cnhind.com/careers"
+  },
+  {
+    "name": "Kubota",
+    "career_url": "https://www.kubota.com/careers"
+  },
+  {
+    "name": "Mahindra",
+    "career_url": "https://www.mahindra.com/careers"
+  },
+  {
+    "name": "Tractors",
+    "career_url": "https://www.tractors.com/careers"
+  },
+  {
+    "name": "Dehaat",
+    "career_url": "https://www.dehaat.com/careers"
+  },
+  {
+    "name": "Ninjacart",
+    "career_url": "https://www.ninjacart.in/careers"
+  },
+  {
+    "name": "Agrostar",
+    "career_url": "https://www.agrostar.in/careers"
+  },
+  {
+    "name": "Bijak",
+    "career_url": "https://www.bijak.in/careers"
+  },
+  {
+    "name": "Waycool",
+    "career_url": "https://www.waycool.in/careers"
+  },
+  {
+    "name": "Lemonade",
+    "career_url": "https://www.lemonade.com/careers"
+  },
+  {
+    "name": "Root",
+    "career_url": "https://www.root.com/careers"
+  },
+  {
+    "name": "Hippo",
+    "career_url": "https://www.hippo.com/careers"
+  },
+  {
+    "name": "Policygenius",
+    "career_url": "https://www.policygenius.com/careers"
+  },
+  {
+    "name": "Coverage",
+    "career_url": "https://www.coverage.com/careers"
+  },
+  {
+    "name": "Clover",
+    "career_url": "https://www.clover.com/careers"
+  },
+  {
+    "name": "Oscar",
+    "career_url": "https://www.oscar.com/careers"
+  },
+  {
+    "name": "Next",
+    "career_url": "https://www.next.com/careers"
+  },
+  {
+    "name": "Acko",
+    "career_url": "https://www.acko.com/careers"
+  },
+  {
+    "name": "Policybazaar",
+    "career_url": "https://www.policybazaar.com/careers"
+  },
+  {
+    "name": "Coverfox",
+    "career_url": "https://www.coverfox.com/careers"
+  },
+  {
+    "name": "Digit",
+    "career_url": "https://www.digit.in/careers"
+  },
+  {
+    "name": "Turtlemint",
+    "career_url": "https://www.turtlemint.com/careers"
+  },
+  {
+    "name": "Renewbuy",
+    "career_url": "https://www.renewbuy.com/careers"
+  },
+  {
+    "name": "Adp",
+    "career_url": "https://www.adp.com/careers"
+  },
+  {
+    "name": "Paychex",
+    "career_url": "https://www.paychex.com/careers"
+  },
+  {
+    "name": "Paylocity",
+    "career_url": "https://www.paylocity.com/careers"
+  },
+  {
+    "name": "Ultimatesoftware",
+    "career_url": "https://www.ultimatesoftware.com/careers"
+  },
+  {
+    "name": "Bamboohr",
+    "career_url": "https://www.bamboohr.com/careers"
+  },
+  {
+    "name": "Greenhouse",
+    "career_url": "https://www.greenhouse.io/careers"
+  },
+  {
+    "name": "Lever",
+    "career_url": "https://www.lever.co/careers"
+  },
+  {
+    "name": "Smartrecruiters",
+    "career_url": "https://www.smartrecruiters.com/careers"
+  },
+  {
+    "name": "Jobvite",
+    "career_url": "https://www.jobvite.com/careers"
+  },
+  {
+    "name": "Icims",
+    "career_url": "https://www.icims.com/careers"
+  },
+  {
+    "name": "Taleo",
+    "career_url": "https://www.taleo.com/careers"
+  },
+  {
+    "name": "Cornerstone",
+    "career_url": "https://www.cornerstone.com/careers"
+  },
+  {
+    "name": "Sumtotal",
+    "career_url": "https://www.sumtotal.com/careers"
+  },
+  {
+    "name": "Saba",
+    "career_url": "https://www.saba.com/careers"
+  },
+  {
+    "name": "Darwinbox",
+    "career_url": "https://www.darwinbox.com/careers"
+  },
+  {
+    "name": "Keka",
+    "career_url": "https://www.keka.com/careers"
+  },
+  {
+    "name": "Greythr",
+    "career_url": "https://www.greythr.com/careers"
+  },
+  {
+    "name": "Pocket",
+    "career_url": "https://www.pocket.com/careers"
+  },
+  {
+    "name": "Beehire",
+    "career_url": "https://www.beehire.com/careers"
+  },
+  {
+    "name": "Puppet",
+    "career_url": "https://www.puppet.com/careers"
+  },
+  {
+    "name": "Chef",
+    "career_url": "https://www.chef.io/careers"
+  },
+  {
+    "name": "Ansible",
+    "career_url": "https://www.ansible.com/careers"
+  },
+  {
+    "name": "Terraform",
+    "career_url": "https://www.terraform.io/careers"
+  },
+  {
+    "name": "Circleci",
+    "career_url": "https://www.circleci.com/careers"
+  },
+  {
+    "name": "Travis-ci",
+    "career_url": "https://www.travis-ci.com/careers"
+  },
+  {
+    "name": "Spinnaker",
+    "career_url": "https://www.spinnaker.io/careers"
+  },
+  {
+    "name": "Argocd",
+    "career_url": "https://www.argocd.com/careers"
+  },
+  {
+    "name": "Prometheus",
+    "career_url": "https://www.prometheus.io/careers"
+  },
+  {
+    "name": "Grafana",
+    "career_url": "https://www.grafana.com/careers"
+  },
+  {
+    "name": "Logstash",
+    "career_url": "https://www.logstash.com/careers"
+  },
+  {
+    "name": "Appcelerator",
+    "career_url": "https://www.appcelerator.com/careers"
+  },
+  {
+    "name": "Xamarin",
+    "career_url": "https://www.xamarin.com/careers"
+  },
+  {
+    "name": "Ionic",
+    "career_url": "https://www.ionic.io/careers"
+  },
+  {
+    "name": "Phonegap",
+    "career_url": "https://www.phonegap.com/careers"
+  },
+  {
+    "name": "Cordova",
+    "career_url": "https://www.cordova.com/careers"
+  },
+  {
+    "name": "Nativescript",
+    "career_url": "https://www.nativescript.org/careers"
+  },
+  {
+    "name": "Sencha",
+    "career_url": "https://www.sencha.com/careers"
+  },
+  {
+    "name": "Telerik",
+    "career_url": "https://www.telerik.com/careers"
+  },
+  {
+    "name": "Kony",
+    "career_url": "https://www.kony.com/careers"
+  },
+  {
+    "name": "Outsystems",
+    "career_url": "https://www.outsystems.com/careers"
+  },
+  {
+    "name": "Oracle",
+    "career_url": "https://www.oracle.com/database/careers"
+  },
+  {
+    "name": "Microsoft",
+    "career_url": "https://www.microsoft.com/sql/careers"
+  },
+  {
+    "name": "Postgresql",
+    "career_url": "https://www.postgresql.org/careers"
+  },
+  {
+    "name": "Mysql",
+    "career_url": "https://www.mysql.com/careers"
+  },
+  {
+    "name": "Mariadb",
+    "career_url": "https://www.mariadb.com/careers"
+  },
+  {
+    "name": "Cockroachlabs",
+    "career_url": "https://www.cockroachlabs.com/careers"
+  },
+  {
+    "name": "Couchbase",
+    "career_url": "https://www.couchbase.com/careers"
+  },
+  {
+    "name": "Cassandra",
+    "career_url": "https://www.cassandra.com/careers"
+  },
+  {
+    "name": "Neo4j",
+    "career_url": "https://www.neo4j.com/careers"
+  },
+  {
+    "name": "Dgraph",
+    "career_url": "https://www.dgraph.io/careers"
+  },
+  {
+    "name": "Microsoft",
+    "career_url": "https://www.powerbi.microsoft.com/careers"
+  },
+  {
+    "name": "Qlik",
+    "career_url": "https://www.qlik.com/careers"
+  },
+  {
+    "name": "Domo",
+    "career_url": "https://www.domo.com/careers"
+  },
+  {
+    "name": "Sisense",
+    "career_url": "https://www.sisense.com/careers"
+  },
+  {
+    "name": "Thoughtspot",
+    "career_url": "https://www.thoughtspot.com/careers"
+  },
+  {
+    "name": "Microstrategy",
+    "career_url": "https://www.microstrategy.com/careers"
+  },
+  {
+    "name": "Tibco",
+    "career_url": "https://www.tibco.com/careers"
+  },
+  {
+    "name": "Sas",
+    "career_url": "https://www.sas.com/careers"
+  },
+  {
+    "name": "Mulesoft",
+    "career_url": "https://www.mulesoft.com/careers"
+  },
+  {
+    "name": "Apigee",
+    "career_url": "https://www.apigee.com/careers"
+  },
+  {
+    "name": "Kong",
+    "career_url": "https://www.kong.com/careers"
+  },
+  {
+    "name": "Tyk",
+    "career_url": "https://www.tyk.io/careers"
+  },
+  {
+    "name": "Postman",
+    "career_url": "https://www.postman.com/careers"
+  },
+  {
+    "name": "Swagger",
+    "career_url": "https://www.swagger.io/careers"
+  },
+  {
+    "name": "Zapier",
+    "career_url": "https://www.zapier.com/careers"
+  },
+  {
+    "name": "Ifttt",
+    "career_url": "https://www.ifttt.com/careers"
+  },
+  {
+    "name": "Integromat",
+    "career_url": "https://www.integromat.com/careers"
+  },
+  {
+    "name": "Workato",
+    "career_url": "https://www.workato.com/careers"
+  },
+  {
+    "name": "Particle",
+    "career_url": "https://www.particle.io/careers"
+  },
+  {
+    "name": "Arduino",
+    "career_url": "https://www.arduino.cc/careers"
+  },
+  {
+    "name": "Raspberrypi",
+    "career_url": "https://www.raspberrypi.org/careers"
+  },
+  {
+    "name": "Thingworx",
+    "career_url": "https://www.thingworx.com/careers"
+  },
+  {
+    "name": "Amazon",
+    "career_url": "https://www.aws.amazon.com/iot/careers"
+  },
+  {
+    "name": "Microsoft",
+    "career_url": "https://www.azure.microsoft.com/iot/careers"
+  },
+  {
+    "name": "Googlecloud",
+    "career_url": "https://www.googlecloud.com/iot/careers"
+  },
+  {
+    "name": "Ibm",
+    "career_url": "https://www.ibm.com/watson-iot/careers"
+  },
+  {
+    "name": "Bosch-iot",
+    "career_url": "https://www.bosch-iot.com/careers"
+  },
+  {
+    "name": "Siemens",
+    "career_url": "https://www.siemens.com/iot/careers"
+  },
+  {
+    "name": "Enphase",
+    "career_url": "https://www.enphase.com/careers"
+  },
+  {
+    "name": "Solaredge",
+    "career_url": "https://www.solaredge.com/careers"
+  },
+  {
+    "name": "Sunpower",
+    "career_url": "https://www.sunpower.com/careers"
+  },
+  {
+    "name": "Firstsolar",
+    "career_url": "https://www.firstsolar.com/careers"
+  },
+  {
+    "name": "Nextera",
+    "career_url": "https://www.nextera.com/careers"
+  },
+  {
+    "name": "Vestas",
+    "career_url": "https://www.vestas.com/careers"
+  },
+  {
+    "name": "Ge",
+    "career_url": "https://www.ge.com/renewableenergy/careers"
+  },
+  {
+    "name": "Siemensgamesa",
+    "career_url": "https://www.siemensgamesa.com/careers"
+  },
+  {
+    "name": "Orsted",
+    "career_url": "https://www.orsted.com/careers"
+  },
+  {
+    "name": "Enel",
+    "career_url": "https://www.enel.com/careers"
+  },
+  {
+    "name": "Garmin",
+    "career_url": "https://www.garmin.com/careers"
+  },
+  {
+    "name": "Fitbit",
+    "career_url": "https://www.fitbit.com/careers"
+  },
+  {
+    "name": "Gopro",
+    "career_url": "https://www.gopro.com/careers"
+  },
+  {
+    "name": "Dji",
+    "career_url": "https://www.dji.com/careers"
+  },
+  {
+    "name": "Parrot",
+    "career_url": "https://www.parrot.com/careers"
+  },
+  {
+    "name": "Oculus",
+    "career_url": "https://www.oculus.com/careers"
+  },
+  {
+    "name": "Htcvive",
+    "career_url": "https://www.htcvive.com/careers"
+  },
+  {
+    "name": "Magicleap",
+    "career_url": "https://www.magicleap.com/careers"
+  },
+  {
+    "name": "Microsoft",
+    "career_url": "https://www.microsoft.com/hololens/careers"
+  },
+  {
+    "name": "Varjo",
+    "career_url": "https://www.varjo.com/careers"
+  },
+  {
+    "name": "Careersingovernment",
+    "career_url": "https://www.careersingovernment.com"
+  },
+  {
+    "name": "Coolworks",
+    "career_url": "https://www.coolworks.com"
+  },
+  {
+    "name": "Seasonalemployment",
+    "career_url": "https://www.seasonalemployment.com"
+  },
+  {
+    "name": "Backdoorjobs",
+    "career_url": "https://www.backdoorjobs.com"
+  },
+  {
+    "name": "Jobmonkey",
+    "career_url": "https://www.jobmonkey.com"
+  },
+  {
+    "name": "Rileyguide",
+    "career_url": "https://www.rileyguide.com"
+  },
+  {
+    "name": "Vault",
+    "career_url": "https://www.vault.com"
+  },
+  {
+    "name": "Wetfeet",
+    "career_url": "https://www.wetfeet.com"
+  },
+  {
+    "name": "Theladders",
+    "career_url": "https://www.theladders.com"
+  },
+  {
+    "name": "Salary",
+    "career_url": "https://www.salary.com"
+  },
+  {
+    "name": "Payscale",
+    "career_url": "https://www.payscale.com"
+  },
+  {
+    "name": "Comparably",
+    "career_url": "https://www.comparably.com"
+  },
+  {
+    "name": "Levels",
+    "career_url": "https://www.levels.fyi"
+  },
+  {
+    "name": "Teamblind",
+    "career_url": "https://www.teamblind.com"
+  },
+  {
+    "name": "Interviewing",
+    "career_url": "https://www.interviewing.io"
+  },
+  {
+    "name": "Pramp",
+    "career_url": "https://www.pramp.com"
+  },
+  {
+    "name": "Gainlo",
+    "career_url": "https://www.gainlo.co"
+  },
+  {
+    "name": "Refdash",
+    "career_url": "https://www.refdash.com"
+  }
 ]

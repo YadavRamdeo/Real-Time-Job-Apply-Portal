@@ -6,6 +6,7 @@ import logging
 import time
 import threading
 from datetime import datetime
+from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from .models import Company, Job
 
@@ -322,11 +323,150 @@ class NaukriScraper(JobScraper):
             logger.error(f"Naukri scraping error: {str(e)}")
             return jobs
 
+
+class MonsterScraper(JobScraper):
+    """Scraper for Monster.com listings (best-effort static HTML parsing)"""
+    def scrape_jobs(self, keywords=None, location=None, country: str | None = None):
+        jobs = []
+        try:
+            kw = (keywords or '').strip().replace(' ', '+')
+            loc = (location or '').strip().replace(' ', '+')
+            url = f"https://www.monster.com/jobs/search/?q={kw}&where={loc}" if kw or loc else "https://www.monster.com/jobs/search/"
+            resp = requests.get(url, headers=self.headers, timeout=15)
+            if resp.status_code != 200:
+                logger.error(f"Failed to fetch Monster jobs: {resp.status_code}")
+                return jobs
+            soup = BeautifulSoup(resp.text, 'html.parser')
+            cards = soup.select('section.card-content, div.card-content, div.results-card')
+            for c in cards:
+                try:
+                    a = c.find('a', href=True)
+                    title_elem = c.find(['h2','h3'])
+                    comp_elem = c.find('div', class_=re.compile('company|employer', re.I)) or c.find('span', class_=re.compile('company', re.I))
+                    loc_elem = c.find('div', class_=re.compile('location', re.I)) or c.find('span', class_=re.compile('location', re.I))
+                    if not a or not title_elem:
+                        continue
+                    title = title_elem.get_text(strip=True)
+                    if not JobScraper.is_cs_role(title):
+                        continue
+                    jobs.append({
+                        'title': title,
+                        'company_name': comp_elem.get_text(strip=True) if comp_elem else 'Unknown',
+                        'location': loc_elem.get_text(strip=True) if loc_elem else '',
+                        'job_type': 'full_time',
+                        'description': '',
+                        'requirements': '',
+                        'salary_min': None,
+                        'salary_max': None,
+                        'application_url': a['href'],
+                        'keywords': self.extract_keywords(title),
+                    })
+                except Exception:
+                    continue
+            return jobs
+        except Exception as e:
+            logger.error(f"Monster scraping error: {e}")
+            return jobs
+
+
+class DiceScraper(JobScraper):
+    """Scraper for Dice.com listings"""
+    def scrape_jobs(self, keywords=None, location=None, country: str | None = None):
+        jobs = []
+        try:
+            kw = (keywords or '').strip().replace(' ', '+')
+            loc = (location or '').strip().replace(' ', '+')
+            url = f"https://www.dice.com/jobs?q={kw}&location={loc}" if kw or loc else "https://www.dice.com/jobs"
+            resp = requests.get(url, headers=self.headers, timeout=15)
+            if resp.status_code != 200:
+                logger.error(f"Failed to fetch Dice jobs: {resp.status_code}")
+                return jobs
+            soup = BeautifulSoup(resp.text, 'html.parser')
+            cards = soup.select('div.card, dji-search-result-list dji-search-result') or soup.find_all('a', attrs={'data-cy': re.compile('card-title|job-card-title')})
+            for c in cards:
+                try:
+                    a = c if c.name == 'a' else c.find('a', href=True)
+                    title_elem = c.find('h5') or c.find('h3') or (c if c.name == 'a' else None)
+                    comp_elem = c.find(attrs={'data-cy': re.compile('company|employer')}) or c.find('span', class_=re.compile('comp', re.I))
+                    loc_elem = c.find(attrs={'data-cy': re.compile('location')}) or c.find('span', class_=re.compile('loc', re.I))
+                    if not a or not title_elem:
+                        continue
+                    title = title_elem.get_text(strip=True)
+                    if not JobScraper.is_cs_role(title):
+                        continue
+                    jobs.append({
+                        'title': title,
+                        'company_name': comp_elem.get_text(strip=True) if comp_elem else 'Unknown',
+                        'location': loc_elem.get_text(strip=True) if loc_elem else '',
+                        'job_type': 'full_time',
+                        'description': '',
+                        'requirements': '',
+                        'salary_min': None,
+                        'salary_max': None,
+                        'application_url': a['href'],
+                        'keywords': self.extract_keywords(title),
+                    })
+                except Exception:
+                    continue
+            return jobs
+        except Exception as e:
+            logger.error(f"Dice scraping error: {e}")
+            return jobs
+
+
+class GlassdoorScraper(JobScraper):
+    """Scraper for Glassdoor listings (best-effort; site is dynamic)"""
+    def scrape_jobs(self, keywords=None, location=None, country: str | None = None):
+        jobs = []
+        try:
+            kw = (keywords or '').strip().replace(' ', '%20')
+            lk = (location or '').strip().replace(' ', '%20')
+            url = f"https://www.glassdoor.com/Job/jobs.htm?sc.keyword={kw}&locKeyword={lk}" if kw or lk else "https://www.glassdoor.com/Job/index.htm"
+            resp = requests.get(url, headers=self.headers, timeout=15)
+            if resp.status_code != 200:
+                logger.error(f"Failed to fetch Glassdoor jobs: {resp.status_code}")
+                return jobs
+            soup = BeautifulSoup(resp.text, 'html.parser')
+            items = soup.select('li.react-job-listing, article.jobCard')
+            for it in items:
+                try:
+                    a = it.find('a', class_=re.compile('jobLink'), href=True) or it.find('a', href=True)
+                    title_elem = it.find(['a','span'], class_=re.compile('job.*title|jobLink', re.I)) or it.find(['a','span'])
+                    comp_elem = it.find('div', class_=re.compile('jobInfo.*company|jobHeader.*company', re.I)) or it.find('span', class_=re.compile('company', re.I))
+                    loc_elem = it.find('span', class_=re.compile('location', re.I))
+                    if not a or not title_elem:
+                        continue
+                    title = title_elem.get_text(strip=True)
+                    if not JobScraper.is_cs_role(title):
+                        continue
+                    href = a['href']
+                    if href and href.startswith('/'):
+                        href = 'https://www.glassdoor.com' + href
+                    jobs.append({
+                        'title': title,
+                        'company_name': comp_elem.get_text(strip=True) if comp_elem else 'Unknown',
+                        'location': loc_elem.get_text(strip=True) if loc_elem else '',
+                        'job_type': 'full_time',
+                        'description': '',
+                        'requirements': '',
+                        'salary_min': None,
+                        'salary_max': None,
+                        'application_url': href,
+                        'keywords': self.extract_keywords(title),
+                    })
+                except Exception:
+                    continue
+            return jobs
+        except Exception as e:
+            logger.error(f"Glassdoor scraping error: {e}")
+            return jobs
+
 def search_jobs_across_portals(keywords: str, location: str | None = None, max_per_portal: int = 10, country: str = 'India', role_keywords: list[str] | None = None):
     """Search jobs on supported portals and return a combined list of dictionaries.
     - Parallelizes portal fetches to reduce total latency.
     - Applies a short timeout per portal.
     - Caches results in-process for a few minutes to avoid repeated scraping.
+    - If Company records exist with known portal domains, only those portals are queried.
     """
     # Cache lookup
     cache_key = (keywords or '', location or '', country or '', int(max_per_portal or 0), tuple(role_keywords) if role_keywords else None)
@@ -348,7 +488,7 @@ def search_jobs_across_portals(keywords: str, location: str | None = None, max_p
             return any(tok in t for tok in role_keywords)
 
         UA = JobScraper(None).headers['User-Agent']
-        TIMEOUT = 6
+        TIMEOUT = 4
         def add_source(items, source):
             for it in items:
                 it['source'] = source
@@ -517,11 +657,66 @@ def search_jobs_across_portals(keywords: str, location: str | None = None, max_p
                 logger.error(f"LinkedIn search error: {e}")
                 return []
 
-        fetchers = [fetch_indeed, fetch_naukri, fetch_wwr, fetch_remoteok, fetch_remotive, fetch_linkedin]
+        def fetch_monster():
+            try:
+                scr = MonsterScraper(Company(name='Monster', website='https://www.monster.com'))
+                items = scr.scrape_jobs(keywords=keywords, location=location, country=country)[:max_per_portal]
+                return [it for it in add_source(items, 'monster') if role_ok(it.get('title'))]
+            except Exception as e:
+                logger.error(f"Monster search error: {e}")
+                return []
+
+        def fetch_dice():
+            try:
+                scr = DiceScraper(Company(name='Dice', website='https://www.dice.com'))
+                items = scr.scrape_jobs(keywords=keywords, location=location, country=country)[:max_per_portal]
+                return [it for it in add_source(items, 'dice') if role_ok(it.get('title'))]
+            except Exception as e:
+                logger.error(f"Dice search error: {e}")
+                return []
+
+        def fetch_glassdoor():
+            try:
+                scr = GlassdoorScraper(Company(name='Glassdoor', website='https://www.glassdoor.com'))
+                items = scr.scrape_jobs(keywords=keywords, location=location, country=country)[:max_per_portal]
+                return [it for it in add_source(items, 'glassdoor') if role_ok(it.get('title'))]
+            except Exception as e:
+                logger.error(f"Glassdoor search error: {e}")
+                return []
+
+        fetchers = [fetch_indeed, fetch_naukri, fetch_monster, fetch_dice, fetch_glassdoor, fetch_wwr, fetch_remoteok, fetch_remotive, fetch_linkedin]
+        portal_map = {
+            'indeed.com': fetch_indeed,
+            'indeed.co.in': fetch_indeed,
+            'naukri.com': fetch_naukri,
+            'monster.com': fetch_monster,
+            'foundit.in': fetch_monster,
+            'dice.com': fetch_dice,
+            'glassdoor.com': fetch_glassdoor,
+            'weworkremotely.com': fetch_wwr,
+            'remoteok.com': fetch_remoteok,
+            'remotive.com': fetch_remotive,
+            'linkedin.com': fetch_linkedin,
+        }
+        portals_in_db: set[str] = set()
+        try:
+            for w in Company.objects.values_list('website', flat=True):
+                if not w:
+                    continue
+                host = urlparse(w).netloc.lower()
+                for dom in portal_map:
+                    if dom in host:
+                        portals_in_db.add(dom)
+        except Exception:
+            pass
+        fetchers = [portal_map[d] for d in sorted(portals_in_db)] or [
+            fetch_indeed, fetch_naukri, fetch_wwr, fetch_remoteok, fetch_remotive, fetch_linkedin
+        ]
+
         with ThreadPoolExecutor(max_workers=len(fetchers)) as ex:
             futs = [ex.submit(fn) for fn in fetchers]
             # Allow overall wait with a soft deadline
-            deadline = TIMEOUT + 2
+            deadline = TIMEOUT + 1
             for f in as_completed(futs, timeout=deadline):
                 try:
                     items = f.result()
@@ -547,37 +742,53 @@ def scrape_company_jobs(company_id, keywords=None, location=None):
     """Scrape jobs for a specific company"""
     try:
         company = Company.objects.get(id=company_id)
+        host = (company.website or '').lower()
         
         # Choose scraper based on company website
-        if 'linkedin.com' in company.website:
+        if 'linkedin.com' in host:
             scraper = LinkedInScraper(company)
-        elif 'indeed.com' in company.website:
+        elif 'indeed.' in host:
             scraper = IndeedScraper(company)
+        elif 'naukri.com' in host:
+            scraper = NaukriScraper(company)
+        elif 'monster.' in host or 'foundit.in' in host:
+            scraper = MonsterScraper(company)
+        elif 'dice.com' in host:
+            scraper = DiceScraper(company)
+        elif 'glassdoor.' in host:
+            scraper = GlassdoorScraper(company)
         else:
             # Default to LinkedIn
             scraper = LinkedInScraper(company)
         
         jobs_data = scraper.scrape_jobs(keywords, location)
         
-        # Save jobs to database
+        # Save jobs to database, ensuring company is set to the target company
+        saved = 0
         for job_data in jobs_data:
-            Job.objects.update_or_create(
-                title=job_data['title'],
-                company=job_data['company'],
-                application_url=job_data['application_url'],
-                defaults={
-                    'location': job_data['location'],
-                    'job_type': job_data['job_type'],
-                    'description': job_data['description'],
-                    'requirements': job_data['requirements'],
-                    'salary_min': job_data['salary_min'],
-                    'salary_max': job_data['salary_max'],
-                    'keywords': job_data['keywords'],
-                    'status': 'active'
-                }
-            )
+            try:
+                Job.objects.update_or_create(
+                    title=job_data.get('title') or '',
+                    company=company,
+                    application_url=job_data.get('application_url') or '',
+                    defaults={
+                        'location': job_data.get('location') or '',
+                        'job_type': job_data.get('job_type') or 'full_time',
+                        'description': job_data.get('description') or '',
+                        'requirements': job_data.get('requirements') or '',
+                        'salary_min': job_data.get('salary_min'),
+                        'salary_max': job_data.get('salary_max'),
+                        'keywords': job_data.get('keywords') or [],
+                        'source': job_data.get('source', ''),
+                        'status': 'active'
+                    }
+                )
+                saved += 1
+            except Exception as e:
+                logger.error(f"Failed to save job '{job_data.get('title')}': {e}")
+                continue
         
-        return len(jobs_data)
+        return saved
     
     except Company.DoesNotExist:
         logger.error(f"Company with ID {company_id} does not exist")

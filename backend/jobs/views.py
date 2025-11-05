@@ -1,6 +1,6 @@
 from rest_framework import viewsets, permissions, status
 from rest_framework.decorators import action, api_view, permission_classes
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from django.db.models import Q
 from django.shortcuts import get_object_or_404
@@ -14,6 +14,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 @api_view(['GET'])
+@permission_classes([AllowAny])
 def get_jobs(request):
     """Get all active jobs"""
     jobs = Job.objects.filter(status='active')
@@ -21,6 +22,7 @@ def get_jobs(request):
     return Response(serializer.data)
 
 @api_view(['GET'])
+@permission_classes([AllowAny])
 def get_job_by_id(request, job_id):
     """Get job details by ID"""
     job = get_object_or_404(Job, id=job_id)
@@ -28,6 +30,7 @@ def get_job_by_id(request, job_id):
     return Response(serializer.data)
 
 @api_view(['GET'])
+@permission_classes([AllowAny])
 def search_live_jobs(request):
     """Search real-time jobs across external portals (Indeed, Naukri, LinkedIn, remote boards),
     and optionally company ATS catalogs when available.
@@ -176,7 +179,7 @@ def find_matching_jobs(request, resume_id):
             from pathlib import Path
 
             # Allow disabling external fetch for speed via ?external=0
-            external_enabled = str(request.query_params.get('external', '1')).lower() in ['1','true','yes','on']
+            external_enabled = str(request.query_params.get('external', '0')).lower() in ['1','true','yes','on']
             external = []
             if external_enabled:
                 external = search_jobs_across_portals(
